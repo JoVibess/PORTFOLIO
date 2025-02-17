@@ -1,3 +1,9 @@
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
+
+
+
 // PAGE ACCUEIL
 
 const elts = {
@@ -121,8 +127,6 @@ menu2.addEventListener("animationend", (event) => {
 
 // Section Two
 
-// Make ScrollTrigger available for use in GSAP animations
-gsap.registerPlugin(ScrollTrigger);
 
 // Select the HTML elements needed for the animation
 const scrollSection = document.querySelectorAll(".scroll-section");
