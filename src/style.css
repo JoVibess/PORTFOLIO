@@ -17,6 +17,7 @@ body {
   height: 100%;
   width: 100%;
   background: #131314;
+  overflow-x: hidden;
 }
 
 body {
@@ -1169,22 +1170,6 @@ footer .blob1 {
   .sectionFive.animated .mockupTablette {
     animation: none; /* Stoppe toute nouvelle animation */
     left: 4%; /* Position finale */
-  }
-  @keyframes slide3 {
-    from {
-      left: 100%;
-    }
-    to {
-      left: 52%;
-    }
-  }
-  @keyframes slide4 {
-    from {
-      left: -100%;
-    }
-    to {
-      left: 4%;
-    }
   }
   .sectionSix {
     padding: 0 24px;

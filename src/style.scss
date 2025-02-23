@@ -20,6 +20,7 @@ body {
   height: 100%;
   width: 100%;
   background: #131314;
+  overflow-x: hidden;
 } 
 body {
   position: relative; /* Nécessaire pour positionner le pseudo-élément */
@@ -1391,6 +1392,8 @@ footer{
   .sectionFour{
       height: 400px;
   }
+
+
   .sectionFive{
       padding: 0 24px;
       height: 500px;
@@ -1421,23 +1424,23 @@ footer{
   
   
   
-  @keyframes slide3 {
-      from {
-          left: 100%;
-      }
-      to {
-          left: 52%;
-      }
-  }
+//   @keyframes slide3 {
+//       from {
+//           left: 100%;
+//       }
+//       to {
+//           left: 52%;
+//       }
+//   }
   
-  @keyframes slide4 {
-      from {
-          left: -100%;
-      }
-      to {
-          left: 4%;
-      }
-  }
+//   @keyframes slide4 {
+//       from {
+//           left: -100%;
+//       }
+//       to {
+//           left: 4%;
+//       }
+//   }
   .sectionSix{
       padding: 0 24px;
       margin-top: 100px;
