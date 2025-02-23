@@ -222,9 +222,9 @@ $bleu: #306AE8;
     color: #fff;
   }
   
-  header ul li:last-child::after {
-    box-shadow: -120px 120px 20px rgba(0,0,0,0.25);
-  }
+  // header ul li:last-child::after {
+  //   box-shadow: -120px 120px 20px rgba(0,0,0,0.25);
+  // }
   
   
   @keyframes slideIn {
@@ -484,7 +484,7 @@ $bleu: #306AE8;
           margin-bottom: 30px;
         }
         p{
-          font-size: 0.8rem;
+          font-size: 0.9rem;
           font-family: 'CustomFont2', sans-serif;
           line-height: 32px;
           letter-spacing: 0.2px;
@@ -555,7 +555,7 @@ h2 {
 
 .item_p{
   margin-left: 18px;
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: 200;
     font-family: 'CustomFont2', sans-serif;
     line-height: 32px;
@@ -662,6 +662,76 @@ h2 {
 
 
 
+  // FOOTER
+  
+    footer{
+      padding: 0 60px;
+      margin: 0 auto;
+      margin-top: 100px;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .foot1{
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          color: white;
+          .menu1{
+              z-index: 10;
+              .logo img {
+                  width: 20rem;
+              }
+          }
+          .contact{
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              margin: 50px 0;
+              h2{
+                  font-family: 'CustomFont1', sans-serif;
+                  font-size: 1.3rem;
+                  font-weight: 600;
+                  text-transform: uppercase;
+                  line-height: 3rem;
+              }
+              .cont1{
+                  display: flex;
+                  svg{
+                      width: 30px;
+                      padding-right: 8px;
+                  }
+                  p{
+                      font-family: 'CustomFont2', sans-serif;;
+                      font-size: 0.9rem;
+                      letter-spacing: 0.2px;
+    
+                  }
+              }
+              .cont2{
+                  display: flex;
+                  svg{
+                      width: 30px;
+                      padding-right: 8px;
+                  }
+                  p{
+                      font-family: 'CustomFont2', sans-serif;;
+                      font-size: 0.9rem;
+                      letter-spacing: 0.2px;
+    
+                  }
+              }
+          }
+      }
+      .blob1 {
+          position: absolute;
+          width: 600px;
+          height: 600px;
+          z-index: -50;
+          filter: blur(30px);
+      }
+    
+    }
 
 
 
@@ -728,12 +798,12 @@ h2 {
   @media (max-width: 500px) {
 
     html {
-      font-size: 14px;
+      font-size: 15px;
   }
 
 
     .heading {
-      font-size: 2.5rem;
+      font-size: 2.2rem;
     }
   
     .item {
@@ -750,8 +820,10 @@ h2 {
     }
   
     .item_number {
-      font-size: .5rem;
+      font-size: 1.3rem;
       top: 1.5rem;
+      width: 2.2rem;
+      height: 2.2rem;
     }
 
     .sectionTwo {
@@ -781,7 +853,17 @@ h2 {
       }
     
     }
+
+     footer{
+      .blob1 {
+          position: absolute;
+          width: 400px;
+          height: 450px;
+          z-index: -50;
+          filter: blur(30px);
+      }
   }
+}
 
 
 
@@ -806,74 +888,3 @@ h2 {
 
 
 
-
-// FOOTER
-
-  footer{
-    padding: 0 60px;
-    margin: 0 auto;
-    margin-top: 300px;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    .foot1{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        color: white;
-        .menu1{
-            z-index: 10;
-            .logo img {
-                width: 20rem;
-            }
-        }
-        .contact{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin: 50px 0;
-            h2{
-                font-family: 'CustomFont1', sans-serif;
-                font-size: 1.3rem;
-                font-weight: 600;
-                text-transform: uppercase;
-                line-height: 3rem;
-            }
-            .cont1{
-                display: flex;
-                svg{
-                    width: 30px;
-                    padding-right: 8px;
-                }
-                p{
-                    font-family: 'CustomFont2', sans-serif;;
-                    font-size: 0.9rem;
-                    letter-spacing: 0.2px;
-  
-                }
-            }
-            .cont2{
-                display: flex;
-                svg{
-                    width: 30px;
-                    padding-right: 8px;
-                }
-                p{
-                    font-family: 'CustomFont2', sans-serif;;
-                    font-size: 0.9rem;
-                    letter-spacing: 0.2px;
-  
-                }
-            }
-        }
-    }
-    .blob1 {
-        position: absolute;
-        width: 600px;
-        height: 600px;
-        z-index: -50;
-        filter: blur(30px);
-    }
-  
-  }
