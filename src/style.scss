@@ -226,9 +226,6 @@ header ul li:hover a {
   color: #fff;
 }
 
-header ul li:last-child::after {
-  box-shadow: -120px 120px 20px rgba(0,0,0,0.25);
-}
 
 
 @keyframes slideIn {

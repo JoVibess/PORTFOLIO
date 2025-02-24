@@ -214,162 +214,8 @@ header ul li:hover a {
   margin: auto;
   width: 100%;
   height: 80vh;
+  background-color: #2e3133;
   position: relative;
-  /* Your average text styling */
-}
-.sectionOne #container {
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* Center the text in the viewport. */
-  width: 100%;
-  height: 100%;
-  top: 0;
-  bottom: 0;
-  /* This filter is a lot of the magic, try commenting it out to see how the morphing works! */
-  filter: url(#threshold) blur(0.6px);
-}
-.sectionOne #text1, .sectionOne #text2 {
-  color: #131314;
-  position: absolute;
-  width: 100%;
-  display: inline-block;
-  font-family: "CustomFont1", sans-serif;
-  font-size: 10rem;
-  font-weight: 500;
-  text-transform: uppercase;
-  text-align: center;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
-}
-
-:root {
-  --color-bg1: rgb(19, 19, 20);
-  --color-bg2: rgb(48, 106, 232);
-  --color1: 48, 106, 232;
-  --color2: 48, 106, 232;
-  --color3: 48, 106, 232;
-  --color4: 48, 106, 232;
-  --color5: 48, 106, 232;
-  --circle-size: 80%;
-  --blending: hard-light;
-}
-
-@keyframes moveInCircle {
-  0% {
-    transform: rotate(0deg);
-  }
-  50% {
-    transform: rotate(180deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-@keyframes moveVertical {
-  0% {
-    transform: translateY(-50%);
-  }
-  50% {
-    transform: translateY(50%);
-  }
-  100% {
-    transform: translateY(-50%);
-  }
-}
-@keyframes moveHorizontal {
-  0% {
-    transform: translateX(-50%) translateY(-10%);
-  }
-  50% {
-    transform: translateX(50%) translateY(10%);
-  }
-  100% {
-    transform: translateX(-50%) translateY(-10%);
-  }
-}
-.gradient-bg {
-  width: 100vw;
-  height: 80vh;
-  position: relative;
-  overflow: hidden;
-  background: linear-gradient(40deg, var(--color-bg1), var(--color-bg2));
-  top: 0;
-  left: 0;
-}
-.gradient-bg svg {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 0;
-}
-.gradient-bg .gradients-container {
-  filter: url(#goo) blur(40px);
-  width: 100%;
-  height: 100%;
-}
-.gradient-bg .g1 {
-  position: absolute;
-  background: radial-gradient(circle at center, rgba(var(--color1), 0.8) 0, rgba(var(--color1), 0) 50%) no-repeat;
-  mix-blend-mode: var(--blending);
-  width: var(--circle-size);
-  height: var(--circle-size);
-  top: calc(50% - var(--circle-size) / 2);
-  left: calc(50% - var(--circle-size) / 2);
-  transform-origin: center center;
-  animation: moveVertical 30s ease infinite;
-  opacity: 1;
-}
-.gradient-bg .g2 {
-  position: absolute;
-  background: radial-gradient(circle at center, rgba(var(--color2), 0.8) 0, rgba(var(--color2), 0) 50%) no-repeat;
-  mix-blend-mode: var(--blending);
-  width: var(--circle-size);
-  height: var(--circle-size);
-  top: calc(50% - var(--circle-size) / 2);
-  left: calc(50% - var(--circle-size) / 2);
-  transform-origin: calc(50% - 400px);
-  animation: moveInCircle 20s reverse infinite;
-  opacity: 1;
-}
-.gradient-bg .g3 {
-  position: absolute;
-  background: radial-gradient(circle at center, rgba(var(--color3), 0.8) 0, rgba(var(--color3), 0) 50%) no-repeat;
-  mix-blend-mode: var(--blending);
-  width: var(--circle-size);
-  height: var(--circle-size);
-  top: calc(50% - var(--circle-size) / 2 + 200px);
-  left: calc(50% - var(--circle-size) / 2 - 500px);
-  transform-origin: calc(50% + 400px);
-  animation: moveInCircle 40s linear infinite;
-  opacity: 1;
-}
-.gradient-bg .g4 {
-  position: absolute;
-  background: radial-gradient(circle at center, rgba(var(--color4), 0.8) 0, rgba(var(--color4), 0) 50%) no-repeat;
-  mix-blend-mode: var(--blending);
-  width: var(--circle-size);
-  height: var(--circle-size);
-  top: calc(50% - var(--circle-size) / 2);
-  left: calc(50% - var(--circle-size) / 2);
-  transform-origin: calc(50% - 200px);
-  animation: moveHorizontal 40s ease infinite;
-  opacity: 0.7;
-}
-.gradient-bg .g5 {
-  position: absolute;
-  background: radial-gradient(circle at center, rgba(var(--color5), 0.8) 0, rgba(var(--color5), 0) 50%) no-repeat;
-  mix-blend-mode: var(--blending);
-  width: calc(var(--circle-size) * 2);
-  height: calc(var(--circle-size) * 2);
-  top: calc(50% - var(--circle-size));
-  left: calc(50% - var(--circle-size));
-  transform-origin: calc(50% - 800px) calc(50% + 200px);
-  animation: moveInCircle 20s ease infinite;
-  opacity: 1;
 }
 
 .sectionTwo {
@@ -398,6 +244,7 @@ header ul li:hover a {
   font-size: 3.2rem;
   font-weight: 700;
   color: #306AE8;
+  text-transform: uppercase;
 }
 .sectionTwo .sectionTwoContent .about .separator {
   width: 100%;
@@ -421,7 +268,7 @@ header ul li:hover a {
   height: 100%;
 }
 
-h2 {
+.item_content h2 {
   margin-top: 0;
   margin-bottom: 1rem;
   font-weight: 700;
@@ -473,7 +320,7 @@ h2 {
   line-height: 32px;
 }
 
-.item_number {
+.item_content .item_number {
   font-size: 1.5rem;
   height: 3rem;
   width: 3rem;
@@ -540,10 +387,25 @@ h2 {
   align-items: center;
   justify-content: center;
 }
-.item_media img {
+.item_media .imgLinks img {
   width: 80%;
   border-radius: 10px;
-  border: solid 1px #fff;
+  border: solid 2px #fff;
+  transition: filter 0.3s ease-in-out;
+}
+.item_media .imgLinks .zoom-icon {
+  position: absolute;
+  top: 50%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+.item_media .imgLinks:hover img {
+  filter: blur(4px);
+}
+.item_media .imgLinks:hover .zoom-icon {
+  opacity: 1;
 }
 
 .padding-global {
@@ -626,11 +488,15 @@ footer .blob1 {
     background: rgb(48, 106, 232);
     background: linear-gradient(180deg, rgb(48, 106, 232) 0%, rgb(19, 19, 20) 100%, rgb(19, 19, 20) 100%);
   }
-  h2 {
+  .item_content h2 {
     margin-top: 0;
     margin-bottom: 1rem;
     font-size: 2.8rem;
     text-transform: uppercase;
+  }
+  .item_content .item_number {
+    font-size: 1.4rem;
+    top: 2rem;
   }
   .item {
     display: flex;
@@ -642,10 +508,6 @@ footer .blob1 {
     width: 100%;
     padding-top: 0;
     padding-bottom: 0;
-  }
-  .item_number {
-    font-size: 1.4rem;
-    top: 2rem;
   }
   .item_media img {
     width: 100%;
@@ -658,7 +520,7 @@ footer .blob1 {
     font-size: 15px;
   }
   .heading {
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
   .item {
     display: flex;
@@ -671,7 +533,7 @@ footer .blob1 {
     padding-top: 0;
     padding-bottom: 0;
   }
-  .item_number {
+  .item_content .item_number {
     font-size: 1.3rem;
     top: 1.5rem;
     width: 2.2rem;

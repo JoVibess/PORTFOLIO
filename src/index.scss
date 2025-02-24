@@ -259,195 +259,9 @@ $bleu: #306AE8;
     margin: auto;
     width: 100%;
     height: 80vh;
+    background-color: #2e3133;
     position: relative;
-    #container {
-      position: absolute;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        /* Center the text in the viewport. */
-        width: 100%;
-        height: 100%;
-        top: 0;
-        bottom: 0;
-        
-        /* This filter is a lot of the magic, try commenting it out to see how the morphing works! */
-        filter: url(#threshold) blur(0.6px);
-    }
-    
-    /* Your average text styling */
-    #text1, #text2 {
-        color: #131314;
-        position: absolute;
-        width: 100%;
-        display: inline-block;
-        
-        font-family: 'CustomFont1', sans-serif;
-        font-size: 10rem;
-        font-weight: 500;
-        text-transform: uppercase;
-        
-        text-align: center;
-        
-        user-select: none;
-    }
-  }
-  
-
-:root {
-    --color-bg1: rgb(19, 19, 20);
-    --color-bg2: rgb(48, 106, 232);
-    --color1: 48, 106, 232;
-    --color2: 48, 106, 232;
-    --color3: 48, 106, 232;
-    --color4: 48, 106, 232;
-    --color5: 48, 106, 232;
-    --circle-size: 80%;
-    --blending: hard-light;
-  }
-  
-  @keyframes moveInCircle {
-    0% {
-      transform: rotate(0deg);
-    }
-    50% {
-      transform: rotate(180deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  }
-  
-  @keyframes moveVertical {
-    0% {
-      transform: translateY(-50%);
-    }
-    50% {
-      transform: translateY(50%);
-    }
-    100% {
-      transform: translateY(-50%);
-    }
-  }
-  
-  @keyframes moveHorizontal {
-    0% {
-      transform: translateX(-50%) translateY(-10%);
-    }
-    50% {
-      transform: translateX(50%) translateY(10%);
-    }
-    100% {
-      transform: translateX(-50%) translateY(-10%);
-    }
-  }
-  
-  
-  .gradient-bg {
-    width: 100vw;
-    height: 80vh;
-    position: relative;
-    overflow: hidden;
-    background: linear-gradient(40deg, var(--color-bg1), var(--color-bg2));
-    top: 0;
-    left: 0;
-  
-    svg {
-      position: fixed;
-      top:0;
-      left:0;
-      width: 0;
-      height: 0;
-    }
-  
-  
-    .gradients-container {
-      filter: url(#goo) blur(40px) ;
-      width: 100%;
-      height: 100%;
-    }
-  
-    .g1 {
-      position: absolute;
-      background: radial-gradient(circle at center, rgba(var(--color1), 0.8) 0, rgba(var(--color1), 0) 50%) no-repeat;
-      mix-blend-mode: var(--blending);
-  
-      width: var(--circle-size);
-      height: var(--circle-size);
-      top: calc(50% - var(--circle-size) / 2);
-      left: calc(50% - var(--circle-size) / 2);
-  
-      transform-origin: center center;
-      animation: moveVertical 30s ease infinite;
-  
-      opacity: 1;
-    }
-  
-    .g2 {
-      position: absolute;
-      background: radial-gradient(circle at center, rgba(var(--color2), 0.8) 0, rgba(var(--color2), 0) 50%) no-repeat;
-      mix-blend-mode: var(--blending);
-  
-      width: var(--circle-size);
-      height: var(--circle-size);
-      top: calc(50% - var(--circle-size) / 2);
-      left: calc(50% - var(--circle-size) / 2);
-  
-      transform-origin: calc(50% - 400px);
-      animation: moveInCircle 20s reverse infinite;
-  
-      opacity: 1;
-    }
-  
-    .g3 {
-      position: absolute;
-      background: radial-gradient(circle at center, rgba(var(--color3), 0.8) 0, rgba(var(--color3), 0) 50%) no-repeat;
-      mix-blend-mode: var(--blending);
-  
-      width: var(--circle-size);
-      height: var(--circle-size);
-      top: calc(50% - var(--circle-size) / 2 + 200px);
-      left: calc(50% - var(--circle-size) / 2 - 500px);
-  
-      transform-origin: calc(50% + 400px);
-      animation: moveInCircle 40s linear infinite;
-  
-      opacity: 1;
-    }
-  
-    .g4 {
-      position: absolute;
-      background: radial-gradient(circle at center, rgba(var(--color4), 0.8) 0, rgba(var(--color4), 0) 50%) no-repeat;
-      mix-blend-mode: var(--blending);
-  
-      width: var(--circle-size);
-      height: var(--circle-size);
-      top: calc(50% - var(--circle-size) / 2);
-      left: calc(50% - var(--circle-size) / 2);
-  
-      transform-origin: calc(50% - 200px);
-      animation: moveHorizontal 40s ease infinite;
-  
-      opacity: 0.7;
-    }
-  
-    .g5 {
-      position: absolute;
-      background: radial-gradient(circle at center, rgba(var(--color5), 0.8) 0, rgba(var(--color5), 0) 50%) no-repeat;
-      mix-blend-mode: var(--blending);
-  
-      width: calc(var(--circle-size) * 2);
-      height: calc(var(--circle-size) * 2);
-      top: calc(50% - var(--circle-size));
-      left: calc(50% - var(--circle-size));
-  
-      transform-origin: calc(50% - 800px) calc(50% + 200px);
-      animation: moveInCircle 20s ease infinite;
-  
-      opacity: 1;
-    }
-  
-  }
+}
   
 // Section Two
 
@@ -476,6 +290,7 @@ $bleu: #306AE8;
           font-size: 3.2rem;
           font-weight: 700;
           color: $bleu;
+          text-transform: uppercase;
         }
         .separator{
           width: 100%;
@@ -509,15 +324,20 @@ $bleu: #306AE8;
 
 
 
-h2 {
-    margin-top: 0;
-    margin-bottom: 1rem;
-    font-weight: 700;
-    line-height: 1.2;
-    font-family: 'CustomFont1', sans-serif;
-    font-size: 3.2rem;
-    text-transform: uppercase;
+
+  .item_content{
+    h2 {
+        margin-top: 0;
+        margin-bottom: 1rem;
+        font-weight: 700;
+        line-height: 1.2;
+        font-family: 'CustomFont1', sans-serif;
+        font-size: 3.2rem;
+        text-transform: uppercase;
+      }
+
   }
+
   
   .heading {
     font-size: 2.5rem;
@@ -560,7 +380,7 @@ h2 {
     font-family: 'CustomFont2', sans-serif;
     line-height: 32px;
 }
-  
+.item_content{
   .item_number {
     font-size: 1.5rem;
     height: 3rem;
@@ -577,6 +397,7 @@ h2 {
     top: 3rem;
     left: 3rem;
   }
+}
   
   .item_content {
     background: rgb(48,106,232);
@@ -627,14 +448,34 @@ h2 {
     display: flex;
     align-items: center;
     justify-content: center;
-    
-    img{
-        width: 80%;
-        border-radius: 10px;
-        border: solid 1px #fff;
+
+    .imgLinks{
+      img{
+          width: 80%;
+          border-radius: 10px;
+          border: solid 2px #fff;
+          transition: filter 0.3s ease-in-out;
+      }
+      .zoom-icon {
+        position: absolute;
+        top: 50%;
+        left: 70%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+      }
     }
     
+    .imgLinks:hover img {
+      filter: blur(4px);
+    }
+
+    .imgLinks:hover .zoom-icon {
+      opacity: 1;
+    }
   }
+
+
   
   .padding-global {
     padding-left: 2.5rem;
@@ -759,13 +600,17 @@ h2 {
   .item_content {
     background: rgb(48,106,232);
     background: linear-gradient(180deg, rgba(48,106,232,1) 0%, rgba(19,19,20,1) 100%, rgba(19,19,20,1) 100%);
+    h2 {
+      margin-top: 0;
+      margin-bottom: 1rem;
+      font-size: 2.8rem;
+      text-transform: uppercase;
     }
-  h2 {
-    margin-top: 0;
-    margin-bottom: 1rem;
-    font-size: 2.8rem;
-    text-transform: uppercase;
-  }
+    .item_number {
+      font-size: 1.4rem;
+      top: 2rem;
+    }
+    }
 
   .item {
     display: flex;
@@ -780,10 +625,6 @@ h2 {
     padding-bottom: 0;
   }
 
-  .item_number {
-    font-size: 1.4rem;
-    top: 2rem;
-  }
   .item_media {
     img{
         width: 100%;
@@ -803,7 +644,7 @@ h2 {
 
 
     .heading {
-      font-size: 2.2rem;
+      font-size: 2rem;
     }
   
     .item {
@@ -818,13 +659,16 @@ h2 {
       padding-top: 0;
       padding-bottom: 0;
     }
-  
-    .item_number {
-      font-size: 1.3rem;
-      top: 1.5rem;
-      width: 2.2rem;
-      height: 2.2rem;
+
+    .item_content{
+      .item_number {
+        font-size: 1.3rem;
+        top: 1.5rem;
+        width: 2.2rem;
+        height: 2.2rem;
+      }
     }
+  
 
     .sectionTwo {
       width: 100%;
