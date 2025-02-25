@@ -5,6 +5,18 @@ import gsap from 'gsap'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
 
 
+// Responsive
+
+let cameraFOV = 75
+
+if(window.innerWidth <= 1024){
+    cameraFOV = 100
+}
+if(window.innerWidth <= 700){
+    cameraFOV = 70
+}
+
+
 /**
  * Base
  */
@@ -93,12 +105,16 @@ window.addEventListener('resize', () =>
         // Update renderer
         renderer.setSize(sizes.width, sizes.height)
         renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
+
+        console.log(window.innerWidth);
+        
     })
-    
+
 // Camera
-    const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height)
+    const camera = new THREE.PerspectiveCamera(cameraFOV, sizes.width / sizes.height)
     camera.position.set(0,0,3)
     scene.add(camera)
+
 
 
 // // Controls
