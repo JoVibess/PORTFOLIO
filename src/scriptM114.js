@@ -30,15 +30,19 @@ menu2.addEventListener("animationend", (event) => {
 
 // Section 1
 const section = document.querySelector('.sectionOne');
-document.querySelector('.sectionOne').addEventListener('mouseenter', () => {
-    const mockup = document.querySelector('.mockup1M114');
 
-    // Ajoute la classe "animated" pour rendre l'état persistant
-    mockup.addEventListener('animationend', () => {
-        section.classList.add('animated');
-    }, { once: true }); // "once" garantit que l'écouteur se retire après la première exécution
+document.querySelectorAll('.sectionOne').forEach(element => {
+    ["mouseenter", "touchmove"].forEach(eventType => {
+        element.addEventListener(eventType, () => {
+            const mockup = document.querySelector('.mockup1M114');
+
+            // Ajoute la classe "animated" pour rendre l'état persistant
+            mockup.addEventListener('animationend', () => {
+                section.classList.add('animated');
+            }, { once: true }); // "once" garantit que l'écouteur se retire après la première exécution
+        });
+    });
 });
-
 
 // section 3
 
