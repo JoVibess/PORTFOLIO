@@ -322,9 +322,6 @@ header ul li:hover a {
   }
 }
 @media (max-width: 600px) {
-  .sectionOne {
-    height: 50vh;
-  }
   .sectionOne .mockup1M114 {
     width: 600px;
   }
