@@ -281,7 +281,7 @@ header ul li:hover a {
 footer {
   padding: 0 60px;
   margin: 0 auto;
-  margin-top: 100px;
+  margin-top: 300px;
   position: relative;
   display: flex;
   justify-content: center;
@@ -312,36 +312,10 @@ footer .foot1 .contact h2 {
   text-transform: uppercase;
   line-height: 3rem;
 }
-footer .foot1 .contact .cont1 {
-  display: flex;
-}
-footer .foot1 .contact .cont1 svg {
-  width: 30px;
-  padding-right: 8px;
-}
-footer .foot1 .contact .cont1 p {
+footer .foot1 .contact p {
   font-family: "CustomFont2", sans-serif;
   font-size: 0.9rem;
   letter-spacing: 0.2px;
-}
-footer .foot1 .contact .cont2 {
-  display: flex;
-}
-footer .foot1 .contact .cont2 svg {
-  width: 30px;
-  padding-right: 8px;
-}
-footer .foot1 .contact .cont2 p {
-  font-family: "CustomFont2", sans-serif;
-  font-size: 0.9rem;
-  letter-spacing: 0.2px;
-}
-footer .blob1 {
-  position: absolute;
-  width: 600px;
-  height: 600px;
-  z-index: -50;
-  filter: blur(30px);
 }
 
 @media (max-width: 500px) {

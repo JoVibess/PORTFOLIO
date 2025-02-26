@@ -506,16 +506,14 @@ header ul li:hover a {
           font-weight: 700;
           color: $bleu;
       }
-      #iconeDate {
-          width: 130px;
-          height: 130px;
-          transform-origin: center center;
-          animation: spin 2s linear infinite;
-          
-      }
-  }
+    }
 }
 
+#iconeDate {
+    transform-origin: center center;
+    animation: spin 2s linear infinite;
+    
+}
 
 @keyframes spin {
   100% {
@@ -808,7 +806,7 @@ header ul li:hover a {
           width: 1px;
           height: 240px;
           background-color: white;
-          margin: auto 0;
+          margin-inline: auto;
           margin-left: 5%;
           margin-right: 5%;
       }
@@ -865,7 +863,7 @@ header ul li:hover a {
   width: 100%;
   max-width: 1600px;
   padding: 0 60px;
-  margin: 0 auto;
+  margin-inline: auto;
   margin-bottom: 150px;
   color: white;
   h2{
@@ -1019,73 +1017,119 @@ header ul li:hover a {
   }
 }
 
+$gap: 20px;
+
 footer{
-  padding: 0 60px;
-  margin: 0 auto;
-  margin-top: 300px;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  .foot1{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      color: white;
-      .menu1{
-          z-index: 10;
-          .logo img {
-              width: 20rem;
-          }
-      }
-      .contact{
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          margin: 50px 0;
-          h2{
-              font-family: 'CustomFont1', sans-serif;
-              font-size: 1.3rem;
-              font-weight: 600;
-              text-transform: uppercase;
-              line-height: 3rem;
-          }
-          .cont1{
-              display: flex;
-              svg{
-                  width: 30px;
-                  padding-right: 8px;
-              }
-              p{
-                  font-family: 'CustomFont2', sans-serif;;
-                  font-size: 0.9rem;
-                  letter-spacing: 0.2px;
 
-              }
-          }
-          .cont2{
-              display: flex;
-              svg{
-                  width: 30px;
-                  padding-right: 8px;
-              }
-              p{
-                  font-family: 'CustomFont2', sans-serif;;
-                  font-size: 0.9rem;
-                  letter-spacing: 0.2px;
+    display: flex;
+    flex-direction: column;
+    margin-inline: auto;
+    margin-top: 200px;
+    color: white;
+    width: 100%;
+    max-width: 1600px;
+    .menu1{
+        z-index: 10;
+        .logo img {
+            width: 100%;
+            max-width: 1600px;
+        }
+    }
+    .contact{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 70px;
+        .contact1{
+            padding-left: 20px;
+            img{
+                width: 30px;
+            }
+        }
+        .contact2{
+            padding-right: 30px;
+            p{
+                font-family: 'CustomFont2', sans-serif;;
+                font-size: 0.7rem;
+                letter-spacing: 0.2px;
+                text-align: end;
+            }
+        }
+    }
+    .wrapper{
+        width: 100%;
+        margin-inline: auto;
+        position: relative;
+        height: 100px;
+        margin-top: 30px;
+        overflow: hidden;
+        mask-image: linear-gradient(
+            to right,
+            rgba(0,0,0,0),
+            rgba(0,0,0,1) 20%,
+            rgba(0,0,0,1) 80%,
+            rgba(0,0,0,0)
+        );
+        .item{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            left: max((100px * 12), 100%);
+            animation-name: scrollLeft;
+            animation-duration: 30s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            img{
+                width: 20px;
+            }
+        }
+        .item1{
+            animation-delay: calc(30s / 12 * (6 - 1) * -1);
+        }
+        .item2{
+            animation-delay: calc(30s / 12 * (6 - 2) * -1);
+        }
+        .item3{
+            animation-delay: calc(30s / 12 * (6 - 3) * -1);
+        }
+        .item4{
+            animation-delay: calc(30s / 12 * (6 - 4) * -1);
+        }
+        .item5{
+            animation-delay: calc(30s / 12 * (6 - 5) * -1);
+        }
+        .item6{
+            animation-delay: calc(30s / 12 * (6 - 6) * -1);
+        }
+        .item7{
+            animation-delay: calc(30s / 12 * (6 - 7) * -1);
+        }
+        .item8{
+            animation-delay: calc(30s / 12 * (6 - 8) * -1);
+        }
+        .item9{
+            animation-delay: calc(30s / 12 * (6 - 9) * -1);
+        }
+        .item10{
+            animation-delay: calc(30s / 12 * (6 - 10) * -1);
+        }
+        .item11{
+            animation-delay: calc(30s / 12 * (6 - 11) * -1);
+        }
+        .item12{
+            animation-delay: calc(30s / 12 * (6 - 12) * -1);
+        }
+    }
+}
+    
 
-              }
-          }
-      }
-  }
-  .blob1 {
-      position: absolute;
-      width: 600px;
-      height: 600px;
-      z-index: -50;
-      filter: blur(30px);
-  }
-
+@keyframes scrollLeft {
+    to {
+        left: -200px;
+    }
 }
 
 
