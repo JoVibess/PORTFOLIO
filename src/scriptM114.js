@@ -105,6 +105,15 @@ circle.addEventListener('click', function(){
 })
 
 
+// Footer
+
+const marquee = document.querySelector('.marquee-content');
+        
+// Duplique le contenu pour éviter le saut
+const clone = marquee.cloneNode(true);
+marquee.parentElement.appendChild(clone);
+
+
 
 
 

@@ -373,75 +373,49 @@ $bleu: #306AE8;
 
 
 
+
   // FOOTER
   
-    footer{
-      padding: 0 60px;
-      margin: 0 auto;
-      margin-top: 100px;
-      position: relative;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      .foot1{
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          color: white;
-          .menu1{
-              z-index: 10;
-              .logo img {
-                  width: 20rem;
+  footer{
+    padding: 0 60px;
+    margin: 0 auto;
+    margin-top: 300px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .foot1{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: white;
+        .menu1{
+            z-index: 10;
+            .logo img {
+                width: 20rem;
+            }
+        }
+        .contact{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 50px 0;
+            h2{
+                font-family: 'CustomFont1', sans-serif;
+                font-size: 1.3rem;
+                font-weight: 600;
+                text-transform: uppercase;
+                line-height: 3rem;
+            }
+              p{
+                  font-family: 'CustomFont2', sans-serif;;
+                  font-size: 0.9rem;
+                  letter-spacing: 0.2px;
+  
               }
-          }
-          .contact{
-              display: flex;
-              flex-direction: column;
-              align-items: center;
-              margin: 50px 0;
-              h2{
-                  font-family: 'CustomFont1', sans-serif;
-                  font-size: 1.3rem;
-                  font-weight: 600;
-                  text-transform: uppercase;
-                  line-height: 3rem;
-              }
-              .cont1{
-                  display: flex;
-                  svg{
-                      width: 30px;
-                      padding-right: 8px;
-                  }
-                  p{
-                      font-family: 'CustomFont2', sans-serif;;
-                      font-size: 0.9rem;
-                      letter-spacing: 0.2px;
-    
-                  }
-              }
-              .cont2{
-                  display: flex;
-                  svg{
-                      width: 30px;
-                      padding-right: 8px;
-                  }
-                  p{
-                      font-family: 'CustomFont2', sans-serif;;
-                      font-size: 0.9rem;
-                      letter-spacing: 0.2px;
-    
-                  }
-              }
-          }
-      }
-      .blob1 {
-          position: absolute;
-          width: 600px;
-          height: 600px;
-          z-index: -50;
-          filter: blur(30px);
-      } 
+            }
     }
+  }
 
 
 
