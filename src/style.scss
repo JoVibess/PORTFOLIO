@@ -658,7 +658,7 @@ header ul li:hover a {
       .mockupIphone {
           position: absolute;
           z-index: 50; 
-          left: 200%;
+          left: -200%;
           img{
               width: 500px;
           }
@@ -690,10 +690,10 @@ header ul li:hover a {
 
 @keyframes slide3 {
   from {
-      left: 100%;
+      left: -100%;
   }
   to {
-      left: 53%;
+      left: 52%;
   }
 }
 
@@ -702,7 +702,7 @@ header ul li:hover a {
       left: -100%;
   }
   to {
-      left: 13%;
+      left: 4%;
   }
 }
 
