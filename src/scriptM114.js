@@ -63,49 +63,16 @@ function removeActiveClasses() {
 
 // // Section 5
 
-// document.querySelector('.sectionFive').addEventListener('mouseenter', () => {
-//     const section5 = document.querySelector('.sectionFive');
-//     const mockup1 = document.querySelector('.mockupIphone');
-//     const mockup2 = document.querySelector('.mockupTablette');
+const section5 = document.querySelector('.sectionFive');
+const mockupIphone = document.querySelector('.mockupIphone');
+const mockupTablette = document.querySelector('.mockupTablette');
 
-//     // Ajoute la classe "animated" pour rendre l'état persistant
-//     mockup1.addEventListener('animationend', () => {
-//         section5.classList.add('animated');
-//     }, { once: true }); // "once" garantit que l'écouteur se retire après la première exécution
-
-//     mockup2.addEventListener('animationend', () => {
-//         section5.classList.add('animated');
-//     }, { once: true }); // "once" garantit que l'écouteur se retire après la première exécution
-// });
-
-
-document.querySelector('.sectionFive').addEventListener('mouseenter', () => {
-    const section5 = document.querySelector('.sectionFive');
-    const mockupIphone = document.querySelector('.mockupIphone');
-    const mockupTablette = document.querySelector('.mockupTablette');
-    mockupIphone.classList.add('animated1');
-    mockupTablette.classList.add('animated2');
-    // // Écouter la fin des animations et ajouter la classe persistante
-    // mockupIphone.addEventListener(
-    //     'animationend',
-    //     () => {
-    //         console.log('aaaaa');
-    //         section5.classList.add('animated');
-    //         console.log('gàrog');
-            
-    //     },
-    //     { once: true } // Supprime l'écouteur après la première exécution
-    // );
-
-    // mockupTablette.addEventListener(
-    //     'animationend',
-    //     () => {
-    //         section5.classList.add('animated');
-    //     },
-    //     { once: true } // Supprime l'écouteur après la première exécution
-    // );
-},{ once: true });
-
+["mouseenter", "touchmove"].forEach(eventType => {
+    section5.addEventListener(eventType, () => {
+        mockupIphone.classList.add('animated1');
+        mockupTablette.classList.add('animated2');
+    }, { once: true }); // L'événement ne s'exécutera qu'une seule fois
+});
 
 // Circle effect
 
