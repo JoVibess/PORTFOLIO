@@ -279,45 +279,115 @@ header ul li:hover a {
 }
 
 footer {
-  padding: 0 60px;
-  margin: 0 auto;
-  margin-top: 300px;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-footer .foot1 {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  margin-inline: auto;
+  margin-top: 200px;
   color: white;
+  width: 100%;
+  max-width: 1600px;
 }
-footer .foot1 .menu1 {
+footer .menu1 {
   z-index: 10;
 }
-footer .foot1 .menu1 .logo img {
-  width: 20rem;
+footer .menu1 .logo img {
+  width: 100%;
+  max-width: 1600px;
+  padding: 0 60px;
 }
-footer .foot1 .contact {
+footer .contact {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 50px 0;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 70px;
 }
-footer .foot1 .contact h2 {
-  font-family: "CustomFont1", sans-serif;
-  font-size: 1.3rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  line-height: 3rem;
+footer .contact .contact1 {
+  padding-left: 20px;
 }
-footer .foot1 .contact p {
+footer .contact .contact1 img {
+  width: 30px;
+}
+footer .contact .contact2 {
+  padding-right: 30px;
+}
+footer .contact .contact2 p {
   font-family: "CustomFont2", sans-serif;
-  font-size: 0.9rem;
+  font-size: 0.7rem;
   letter-spacing: 0.2px;
+  text-align: end;
+}
+footer .wrapper {
+  width: 100%;
+  margin-inline: auto;
+  position: relative;
+  height: 100px;
+  margin-top: 30px;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgb(0, 0, 0) 20%, rgb(0, 0, 0) 80%, rgba(0, 0, 0, 0));
+          mask-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgb(0, 0, 0) 20%, rgb(0, 0, 0) 80%, rgba(0, 0, 0, 0));
+}
+footer .wrapper .item {
+  font-family: "CustomFont2", sans-serif;
+  font-size: 0.6rem;
+  letter-spacing: 0.2px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  left: max(1200px, 100%);
+  animation-name: scrollLeft;
+  animation-duration: 30s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+footer .wrapper .item img {
+  width: 20px;
+}
+footer .wrapper .item1 {
+  animation-delay: -12.5s;
+}
+footer .wrapper .item2 {
+  animation-delay: -10s;
+}
+footer .wrapper .item3 {
+  animation-delay: -7.5s;
+}
+footer .wrapper .item4 {
+  animation-delay: -5s;
+}
+footer .wrapper .item5 {
+  animation-delay: -2.5s;
+}
+footer .wrapper .item6 {
+  animation-delay: 0s;
+}
+footer .wrapper .item7 {
+  animation-delay: 2.5s;
+}
+footer .wrapper .item8 {
+  animation-delay: 5s;
+}
+footer .wrapper .item9 {
+  animation-delay: 7.5s;
+}
+footer .wrapper .item10 {
+  animation-delay: 10s;
+}
+footer .wrapper .item11 {
+  animation-delay: 12.5s;
+}
+footer .wrapper .item12 {
+  animation-delay: 15s;
 }
 
+@keyframes scrollLeft {
+  to {
+    left: -200px;
+  }
+}
 @media (max-width: 500px) {
   html {
     font-size: 15px;
