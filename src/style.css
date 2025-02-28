@@ -870,6 +870,7 @@ footer .menu1 {
 footer .menu1 .logo img {
   width: 100%;
   max-width: 1600px;
+  padding: 0 60px;
 }
 footer .contact {
   display: flex;
@@ -903,6 +904,10 @@ footer .wrapper {
           mask-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgb(0, 0, 0) 20%, rgb(0, 0, 0) 80%, rgba(0, 0, 0, 0));
 }
 footer .wrapper .item {
+  font-family: "CustomFont2", sans-serif;
+  font-size: 0.6rem;
+  letter-spacing: 0.2px;
+  text-transform: uppercase;
   display: flex;
   align-items: center;
   justify-content: center;

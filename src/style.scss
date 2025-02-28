@@ -1033,6 +1033,7 @@ footer{
         .logo img {
             width: 100%;
             max-width: 1600px;
+            padding: 0 60px;
         }
     }
     .contact{
@@ -1071,6 +1072,10 @@ footer{
             rgba(0,0,0,0)
         );
         .item{
+            font-family: 'CustomFont2', sans-serif;;
+            font-size: 0.6rem;
+            letter-spacing: 0.2px;
+            text-transform: uppercase;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -1131,6 +1136,8 @@ footer{
         left: -200px;
     }
 }
+
+
 
 
 
