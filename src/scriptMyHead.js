@@ -25,7 +25,7 @@ window.addEventListener('keydown', (event) => {
     
 })
 
-
+gui.show(gui._hidden)
 
 
 // Responsive

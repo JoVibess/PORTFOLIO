@@ -39,6 +39,10 @@ body::before {
   pointer-events: none; /* Permet de cliquer/interagir avec les éléments en dessous */
 }
 
+.svgBackground {
+  height: 0;
+}
+
 @font-face {
   font-family: "CustomFont1";
   src: url("/font/GOMERY-Bold.woff2") format("woff2");
@@ -1117,7 +1121,7 @@ footer .wrapper .item12 {
     height: 600px;
   }
 }
-@media (max-width: 480px) {
+@media (max-width: 500px) {
   html {
     font-size: 14px;
   }
@@ -1300,5 +1304,8 @@ footer .wrapper .item12 {
   }
   .particles {
     background: linear-gradient(180deg, #21618C, #7E7E78);
+  }
+  footer {
+    margin-top: 40px;
   }
 }/*# sourceMappingURL=style.css.map */
