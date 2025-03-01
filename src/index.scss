@@ -37,6 +37,10 @@ $bleu: #306AE8;
     z-index: 10; /* S'assure que cette couche soit au-dessus de tout */
     pointer-events: none; /* Permet de cliquer/interagir avec les éléments en dessous */
   }
+
+  .svgBackground {
+    height: 0;
+  }
   
 // ___________________FONT_____________________
 
@@ -285,26 +289,58 @@ $bleu: #306AE8;
         display: flex;
         flex-direction: column;
         justify-content: center;
+        .aboutTitle{
+          display: flex;
+          position: relative;
+          img{
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            left: 450px;
+            bottom: 30px;
+          }
+        }
         h2{
           font-family: 'CustomFont1', sans-serif;
-          font-size: 3.2rem;
+          font-size: 4rem;
           font-weight: 700;
           color: $bleu;
           text-transform: uppercase;
         }
-        .separator{
+        .separator {
           width: 100%;
-          height: 1px;
-          background-color: #fff;
+          height: 4px;
+          background: linear-gradient(to right, #007bff, #131314); 
           margin-bottom: 30px;
+          margin-top: 6px;
+          border-radius: 50px;
         }
         p{
           font-size: 0.9rem;
           font-family: 'CustomFont2', sans-serif;
-          line-height: 32px;
+          line-height: 40px;
           letter-spacing: 0.2px;
           font-weight: 200;
           padding-bottom: 18px;
+        }
+        .mee{
+          display: flex;
+          justify-content: flex-end;
+          position: relative;
+          p{
+            font-size: 1.4rem;
+            font-family: 'CustomFont2', sans-serif;
+            font-style: italic;
+
+            color: $bleu;
+            padding: 0;
+          }
+          img{
+            width: 100px;
+            position: absolute;
+            right: -124px;
+            top: -56px;
+          }
         }
 
       }
@@ -380,6 +416,7 @@ $bleu: #306AE8;
     flex-direction: column;
     margin-inline: auto;
     margin-top: 200px;
+    margin-bottom: 30px;
     color: white;
     width: 100%;
     max-width: 1600px;
@@ -546,6 +583,20 @@ $bleu: #306AE8;
           width: 100%;
           text-align: justify;
           justify-content: center;
+          .aboutTitle{
+            display: flex;
+            position: relative;
+            img{
+              position: absolute;
+              width: 50px;
+              height: 50px;
+              left: 330px;
+              bottom: 20px;
+            }
+          }
+          .mee{
+            display: none;
+          }
         }
         .myHead{
           width: 100%;
@@ -560,13 +611,7 @@ $bleu: #306AE8;
     }
 
      footer{
-      .blob1 {
-          position: absolute;
-          width: 400px;
-          height: 450px;
-          z-index: -50;
-          filter: blur(30px);
-      }
+      margin-top: 40px;
   }
 
 }
