@@ -17,8 +17,8 @@ const gui = new GUI({
     title: 'Nice debug UI',
     closeFolders: false
 })
-// gui.close()
-// gui.hide()
+gui.close()
+gui.hide()
 
 window.addEventListener('keydown', (event) => {
     if(event.key == 'h')
@@ -126,7 +126,7 @@ pointLightFolder.open() // Ouvre le folder par défaut
 
 debugObject.rectAreaLightColor = '#583bc4'
 
-const rectAreaLight = new THREE.RectAreaLight(debugObject.rectAreaLightColor, 1, 5, 2)
+const rectAreaLight = new THREE.RectAreaLight(debugObject.rectAreaLightColor, 1.5, 5, 2)
 rectAreaLight.position.set(-1, -1.7, 1.7)
 rectAreaLight.lookAt(new THREE.Vector3())
 scene.add(rectAreaLight)
