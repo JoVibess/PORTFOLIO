@@ -97,55 +97,55 @@ lightFolder.addColor(debugObject, 'directionalColor').name('Directional Light Co
 //     hemisphereLight.groundColor.set(debugObject.groundColor)
 // })
 
-// Point Light
+// // Point Light
 
-debugObject.pointLightColor = '#da94ff' // Format hex valide
+// debugObject.pointLightColor = '#da94ff' // Format hex valide
 
-// Point Light
-const pointLight = new THREE.PointLight(debugObject.pointLightColor, 1.52, 2.8, 1.42)
-pointLight.position.set(1.65, -0.42, 0.79)
-scene.add(pointLight)
+// // Point Light
+// const pointLight = new THREE.PointLight(debugObject.pointLightColor, 1.52, 2.8, 1.42)
+// pointLight.position.set(1.65, -0.42, 0.79)
+// scene.add(pointLight)
 
-// GUI - Point Light
-const pointLightFolder = gui.addFolder('Point Light')
-pointLightFolder.add(pointLight, 'intensity').min(0).max(5).step(0.01).name('Intensity')
-pointLightFolder.addColor(debugObject, 'pointLightColor').name('Color').onChange(() => {
-    pointLight.color.set(debugObject.pointLightColor)
-})
-pointLightFolder.add(pointLight, 'distance').min(0).max(10).step(0.1).name('Distance')
-pointLightFolder.add(pointLight, 'decay').min(0).max(5).step(0.01).name('Decay')
+// // GUI - Point Light
+// const pointLightFolder = gui.addFolder('Point Light')
+// pointLightFolder.add(pointLight, 'intensity').min(0).max(5).step(0.01).name('Intensity')
+// pointLightFolder.addColor(debugObject, 'pointLightColor').name('Color').onChange(() => {
+//     pointLight.color.set(debugObject.pointLightColor)
+// })
+// pointLightFolder.add(pointLight, 'distance').min(0).max(10).step(0.1).name('Distance')
+// pointLightFolder.add(pointLight, 'decay').min(0).max(5).step(0.01).name('Decay')
 
-const pointLightPositionFolder = pointLightFolder.addFolder('Position')
-pointLightPositionFolder.add(pointLight.position, 'x').min(-5).max(5).step(0.01).name('X')
-pointLightPositionFolder.add(pointLight.position, 'y').min(-5).max(5).step(0.01).name('Y')
-pointLightPositionFolder.add(pointLight.position, 'z').min(-5).max(5).step(0.01).name('Z')
+// const pointLightPositionFolder = pointLightFolder.addFolder('Position')
+// pointLightPositionFolder.add(pointLight.position, 'x').min(-5).max(5).step(0.01).name('X')
+// pointLightPositionFolder.add(pointLight.position, 'y').min(-5).max(5).step(0.01).name('Y')
+// pointLightPositionFolder.add(pointLight.position, 'z').min(-5).max(5).step(0.01).name('Z')
 
-pointLightFolder.open() // Ouvre le folder par défaut
+// pointLightFolder.open() // Ouvre le folder par défaut
 
-// Rectangle Light
+// // Rectangle Light
 
-debugObject.rectAreaLightColor = '#583bc4'
+// debugObject.rectAreaLightColor = '#583bc4'
 
-const rectAreaLight = new THREE.RectAreaLight(debugObject.rectAreaLightColor, 1.5, 5, 2)
-rectAreaLight.position.set(-1, -1.7, 1.7)
-rectAreaLight.lookAt(new THREE.Vector3())
-scene.add(rectAreaLight)
+// const rectAreaLight = new THREE.RectAreaLight(debugObject.rectAreaLightColor, 1.5, 5, 2)
+// rectAreaLight.position.set(-1, -1.7, 1.7)
+// rectAreaLight.lookAt(new THREE.Vector3())
+// scene.add(rectAreaLight)
 
-// GUI - Rect Area Light
-const rectAreaLightFolder = gui.addFolder('Rect Area Light')
-rectAreaLightFolder.add(rectAreaLight, 'intensity').min(0).max(10).step(0.1).name('Intensity')
-rectAreaLightFolder.addColor(debugObject, 'rectAreaLightColor').name('Color').onChange(() => {
-    rectAreaLight.color.set(debugObject.rectAreaLightColor)
-})
-rectAreaLightFolder.add(rectAreaLight, 'width').min(0.1).max(5).step(0.1).name('Width')
-rectAreaLightFolder.add(rectAreaLight, 'height').min(0.1).max(5).step(0.1).name('Height')
+// // GUI - Rect Area Light
+// const rectAreaLightFolder = gui.addFolder('Rect Area Light')
+// rectAreaLightFolder.add(rectAreaLight, 'intensity').min(0).max(10).step(0.1).name('Intensity')
+// rectAreaLightFolder.addColor(debugObject, 'rectAreaLightColor').name('Color').onChange(() => {
+//     rectAreaLight.color.set(debugObject.rectAreaLightColor)
+// })
+// rectAreaLightFolder.add(rectAreaLight, 'width').min(0.1).max(5).step(0.1).name('Width')
+// rectAreaLightFolder.add(rectAreaLight, 'height').min(0.1).max(5).step(0.1).name('Height')
 
-const rectAreaLightPositionFolder = rectAreaLightFolder.addFolder('Position')
-rectAreaLightPositionFolder.add(rectAreaLight.position, 'x').min(-5).max(5).step(0.1).name('X')
-rectAreaLightPositionFolder.add(rectAreaLight.position, 'y').min(-5).max(5).step(0.1).name('Y')
-rectAreaLightPositionFolder.add(rectAreaLight.position, 'z').min(-5).max(5).step(0.1).name('Z')
+// const rectAreaLightPositionFolder = rectAreaLightFolder.addFolder('Position')
+// rectAreaLightPositionFolder.add(rectAreaLight.position, 'x').min(-5).max(5).step(0.1).name('X')
+// rectAreaLightPositionFolder.add(rectAreaLight.position, 'y').min(-5).max(5).step(0.1).name('Y')
+// rectAreaLightPositionFolder.add(rectAreaLight.position, 'z').min(-5).max(5).step(0.1).name('Z')
 
-rectAreaLightFolder.open() // Ouvre le folder par défaut
+// rectAreaLightFolder.open() // Ouvre le folder par défaut
 
 
 // Material
