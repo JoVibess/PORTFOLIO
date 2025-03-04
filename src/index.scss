@@ -411,7 +411,6 @@ $bleu: #306AE8;
 
 
   footer{
-
     display: flex;
     flex-direction: column;
     margin-inline: auto;
@@ -455,6 +454,7 @@ $bleu: #306AE8;
         position: relative;
         height: 100px;
         margin-top: 30px;
+        border-top: solid 1px white;
         overflow: hidden;
         mask-image: linear-gradient(
             to right,
