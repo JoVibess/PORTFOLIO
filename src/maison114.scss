@@ -1394,6 +1394,7 @@ footer{
           }
       }
       .projetTexte {
+        margin-top: 20px;
           .projetSecRes {
               display: flex;
               width: 100%;
@@ -1406,7 +1407,7 @@ footer{
                       li {
                           font-size: 0.9rem;
                           height: 27px;
-                          margin-bottom: 18px;
+                          margin-bottom: 12px;
                           img {
                               width: 30px;
                           }
@@ -1616,7 +1617,10 @@ footer{
   }
 
   footer{
-    margin-top: 40px;
+    margin-top: 70px;
+    .contact{
+        margin-top: 14px;
+    }
 }
 }
 
