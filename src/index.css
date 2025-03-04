@@ -472,6 +472,9 @@ footer .wrapper .item12 {
     height: 100%;
   }
   footer {
-    margin-top: 40px;
+    margin-top: 70px;
+  }
+  footer .contact {
+    margin-top: 14px;
   }
 }/*# sourceMappingURL=index.css.map */

@@ -276,7 +276,7 @@ header ul li:hover a {
 }
 .sectionTwo .projetTexte .projetSecRes .projetSec2 ul li {
   height: 33.75px;
-  margin-bottom: 18px;
+  margin-bottom: 14px;
 }
 .sectionTwo .projetTexte .projetSecRes .projetSec2 ul a {
   color: white;
@@ -496,6 +496,11 @@ footer .wrapper .item12 {
     left: -200px;
   }
 }
+a[href^=tel] {
+  color: white !important;
+  text-decoration: none;
+}
+
 @media (max-width: 1200px) {
   .sectionUne {
     padding: 0 60px;
@@ -575,12 +580,18 @@ footer .wrapper .item12 {
     margin-bottom: 40px;
     padding: 0 24px;
   }
+  .sectionTwo .projetTitre {
+    padding: 10px 0;
+  }
   .sectionTwo .projetTitre h1 {
     font-size: 3rem;
   }
   .sectionTwo .projetTitre #iconeDate {
     width: 40px;
     height: 40px;
+  }
+  .sectionTwo .projetTexte {
+    margin-top: 20px;
   }
   .sectionTwo .projetTexte .projetSecRes {
     display: flex;
@@ -595,7 +606,7 @@ footer .wrapper .item12 {
   .sectionTwo .projetTexte .projetSecRes .projetSec2 ul li {
     font-size: 0.9rem;
     height: 27px;
-    margin-bottom: 18px;
+    margin-bottom: 12px;
   }
   .sectionTwo .projetTexte .projetSecRes .projetSec2 ul li img {
     width: 30px;
@@ -621,9 +632,10 @@ footer .wrapper .item12 {
   .sectionThree .container .panel h2 {
     top: 30px;
     left: 24px;
+    margin-right: 4px;
   }
   .sectionThree .container .panel p {
-    top: 70px;
+    top: 120px;
     left: 24px;
     padding-right: 24px;
   }
@@ -631,6 +643,9 @@ footer .wrapper .item12 {
     background-size: 0;
   }
   footer {
-    margin-top: 40px;
+    margin-top: 70px;
+  }
+  footer .contact {
+    margin-top: 14px;
   }
 }/*# sourceMappingURL=soulSight.css.map */
