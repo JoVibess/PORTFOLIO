@@ -425,6 +425,11 @@ footer .wrapper .item12 {
     left: -200px;
   }
 }
+a[href^=tel] {
+  color: white !important;
+  text-decoration: none;
+}
+
 @media (max-width: 500px) {
   html {
     font-size: 15px;
