@@ -1,68 +1,85 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JDX</title>
-    <link rel="stylesheet" href="/index.css">
-    
-</head>
+    <link rel="stylesheet" href="/index.css" />
+  </head>
 
-
-<body>
+  <body>
     <header>
-        <div class="menu1">
-            <div class="logo"><a href="#"><img src="/img/logo-blanc.webp" alt="Logo de Joey Decroix" width="100px"></a></div>
-            <div class="menu-burger"><a href="#"><img src="/img/menu.webp" alt="Menu burger" width="30px"></a></div> 
+      <div class="menu1">
+        <div class="logo">
+          <a href="#"
+            ><img
+              src="/img/logo-blanc.webp"
+              alt="Logo de Joey Decroix"
+              width="100px"
+          /></a>
         </div>
+        <div class="menu-burger">
+          <a href="#"
+            ><img src="/img/menu.webp" alt="Menu burger" width="30px"
+          /></a>
+        </div>
+      </div>
 
-        <div class="menu2">
-                <nav>
-                    <ul>
-                        <li style="--i:3;"><a href="http://localhost:5173/index.html">Home</a></li>
-                        <li style="--i:2;"><a href="http://localhost:5173/maison114.html">Projects</a></li>
-                        <li style="--i:1;"><a href="#">Contact</a></li>
-                    </ul>
-                </nav>
-        </div>
+      <div class="menu2">
+        <nav>
+          <ul>
+            <li style="--i: 3">
+              <a href="http://localhost:5173/index.html">Home</a>
+            </li>
+            <li style="--i: 2">
+              <a href="http://localhost:5173/maison114.html">Projects</a>
+            </li>
+            <li style="--i: 1"><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
-    
-    
+
     <main>
+      <section class="sectionOne"></section>
 
-        <section class="sectionOne">
-
-        </section>
-            
-        <section class="sectionTwo">
-            <div class="sectionTwoContent">
-                <div class="about">
-                    <div class="aboutTitle">
-                        <h2>Who am I?</h2>
-                        <img src="/img/starBleu.webp" alt="Une icone d'étoile">
-                    </div>
-                    <div class="separator"></div>
-                    <p>Passionate about design and web development, I am currently in my second year of a Bachelor's degree at MyDigitalSchool Annecy, specializing in web development. Alongside my studies, I am also training on the Three.js framework to create animations and 3D visualizations.
-                    </p>
-                    <p>
-                        Born and raised in Mauritius for 17 years, my background and experiences have allowed me to develop a creative vision in my projects. Holding a degree in marine biology, this training gives me a unique approach to how I design and approach web development. My goal is to create solutions with an unconventional UX and UI design. Always motivated, I strive to take on new challenges and push the boundaries of digital creation.
-                    </p>
-                    <div class="mee">
-                        <p>
-                            It's me
-                        </p>
-                        <img src="/img/arrowBleu.webp" alt="Une flèche bleu">
-                    </div>
-    
-                </div>
-                <div class="myHead">
-                    <canvas class="webgl"></canvas>
-                </div>
+      <section class="sectionTwo">
+        <div class="sectionTwoContent">
+          <div class="about">
+            <div class="aboutTitle">
+              <h2>Who am I?</h2>
+              <img id="blueStar" src="/img/starBleu.webp" alt="Une icone d'étoile" />
             </div>
-        </section>
+            <div class="separator"></div>
+            <p id="text1">
+              Passionate about design and web development, I am currently in my
+              second year of a Bachelor's degree at MyDigitalSchool Annecy,
+              specializing in web development. Alongside my studies, I am also
+              training on the Three.js framework to create animations and 3D
+              visualizations.
+            </p>
+            <p id="text2">
+              Born and raised in Mauritius for 17 years, my background and
+              experiences have allowed me to develop a creative vision in my
+              projects. Holding a degree in marine biology, this training gives
+              me a unique approach to how I design and approach web development.
+              My goal is to create solutions with an unconventional UX and UI
+              design. Always motivated, I strive to take on new challenges and
+              push the boundaries of digital creation.
+            </p>
+            <div class="mee">
+              <p id="text3">It's me</p>
+              <img src="/img/arrowBleu.webp" alt="Une flèche bleu" />
+            </div>
+          </div>
+          <div class="myHead">
+            <canvas class="webgl"></canvas>
+          </div>
+        </div>
+      </section>
 
-        <!-- <div class="sectionThree">
+      <!-- <div class="sectionThree">
             <div class="container-medium">
                 <div class="padding-vertical">
                 <div class="max-width-large">
@@ -165,58 +182,87 @@
                 </div>
                 </div>
             </div> -->
-        
-        <section class="sectionThree">
 
-
-        </section>
-
+      <section class="sectionThree"></section>
     </main>
 
-
     <footer>
-        <div class="menu1">
-            <div class="logo"><a href="#"><img src="/img/logo-blanc.webp" alt="Logo JDX"></a></div>
+      <div class="menu1">
+        <div class="logo">
+          <a href="#"><img src="/img/logo-blanc.webp" alt="Logo JDX" /></a>
         </div>
-        <div class="wrapper">
+      </div>
+      <div class="wrapper">
+        <div class="item item1">creative</div>
+        <div class="item item2">
+          <img
+            id="iconeDate"
+            src="/img/starBlanc.webp"
+            alt="Une icone d'étoile"
+          />
+        </div>
+        <div class="item item3">developer</div>
+        <div class="item item4">
+          <img
+            id="iconeDate"
+            src="/img/starBlanc.webp"
+            alt="Une icone d'étoile"
+          />
+        </div>
+        <div class="item item5">designer</div>
+        <div class="item item6">
+          <img
+            id="iconeDate"
+            src="/img/starBlanc.webp"
+            alt="Une icone d'étoile"
+          />
+        </div>
+        <div class="item item7">creative</div>
+        <div class="item item8">
+          <img
+            id="iconeDate"
+            src="/img/starBlanc.webp"
+            alt="Une icone d'étoile"
+          />
+        </div>
+        <div class="item item9">developer</div>
+        <div class="item item10">
+          <img
+            id="iconeDate"
+            src="/img/starBlanc.webp"
+            alt="Une icone d'étoile"
+          />
+        </div>
+        <div class="item item11">designer</div>
+        <div class="item item12">
+          <img
+            id="iconeDate"
+            src="/img/starBlanc.webp"
+            alt="Une icone d'étoile"
+          />
+        </div>
+      </div>
 
-            <div class="item item1">creative</div>
-            <div class="item item2"> <img id="iconeDate" src="/img/starBlanc.webp" alt="Une icone d'étoile"></div>
-            <div class="item item3">developer</div>
-            <div class="item item4"> <img id="iconeDate" src="/img/starBlanc.webp" alt="Une icone d'étoile"></div>
-            <div class="item item5">designer</div>
-            <div class="item item6"> <img id="iconeDate" src="/img/starBlanc.webp" alt="Une icone d'étoile"></div>
-            <div class="item item7">creative</div>
-            <div class="item item8"> <img id="iconeDate" src="/img/starBlanc.webp" alt="Une icone d'étoile"></div>
-            <div class="item item9">developer</div>
-            <div class="item item10"> <img id="iconeDate" src="/img/starBlanc.webp" alt="Une icone d'étoile"></div>
-            <div class="item item11">designer</div>
-            <div class="item item12"> <img id="iconeDate" src="/img/starBlanc.webp" alt="Une icone d'étoile"></div>
+      <div class="contact">
+        <div class="contact1">
+          <a href="https://www.linkedin.com/in/joey-decroix/"
+            ><img src="/img/linkedin.webp" alt="Logo de LinkedIn"
+          /></a>
         </div>
-
-        <div class="contact">
-            <div class="contact1">
-                <a href="https://www.linkedin.com/in/joey-decroix/"><img src="/img/linkedin.webp" alt="Logo de LinkedIn"></a>
-            </div>
-            <div class="contact2">
-                <p>joeydecroix.pro@gmail.com</p>
-                <p>+33 06 15 12 02 78</p>
-            </div>
+        <div class="contact2">
+          <p>joeydecroix.pro@gmail.com</p>
+          <p>+33 06 15 12 02 78</p>
         </div>
+      </div>
     </footer>
+  </body>
 
+  <svg class="svgBackground">
+    <filter id="grainy">
+      <feTurbulence type="turbulence" baseFrequency="0.5" />
+    </filter>
+  </svg>
 
-</body>
-
-    <svg class="svgBackground"> 
-        <filter id="grainy">
-            <feTurbulence
-                type="turbulence"
-                baseFrequency="0.5"
-            />
-        </filter>
-    </svg>
-
-    <script type="module" src="./scriptIndex.js"></script>
-    <script type="module" src="./scriptMyHead.js"></script>
+  <script type="module" src="./scriptIndex.js"></script>
+  <script type="module" src="./scriptMyHead.js"></script>
 </html>
