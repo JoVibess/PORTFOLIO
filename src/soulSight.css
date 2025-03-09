@@ -91,8 +91,9 @@ body::before {
   font-weight: 900; /* Poids pour Black */
   font-style: normal;
 }
-header ul li:hover, header ul li:active {
-  background: #3C76F3;
+header ul li:hover,
+header ul li:active {
+  background: #3c76f3;
   transform: translateX(-50px);
 }
 
@@ -110,7 +111,7 @@ header ul li::before {
 }
 
 header ul li:hover::before {
-  background-color: #1E4AA9;
+  background-color: #1e4aa9;
 }
 
 header ul li::after {
@@ -127,7 +128,7 @@ header ul li::after {
 }
 
 header ul li:hover::after {
-  background-color: #3464CB;
+  background-color: #3464cb;
 }
 
 header {
@@ -301,7 +302,7 @@ header ul li:hover a {
   font-family: "CustomFont1", sans-serif;
   font-size: 7.6rem;
   font-weight: 700;
-  color: #306AE8;
+  color: #306ae8;
 }
 
 #iconeDate {
@@ -377,7 +378,8 @@ header ul li:hover a {
 .sectionThree .container .panel.active {
   flex: 5;
 }
-.sectionThree .container .panel.active h2, .sectionThree .container .panel.active p {
+.sectionThree .container .panel.active h2,
+.sectionThree .container .panel.active p {
   opacity: 1;
 }
 .sectionThree .container .panel.active.fond {
