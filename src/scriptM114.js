@@ -33,26 +33,26 @@ menu2.addEventListener("animationend", (event) => {
 });
 
 // Section 1
-const section = document.querySelector(".sectionOne");
 
-document.querySelectorAll(".sectionOne").forEach((element) => {
-  ["mouseenter", "touchmove"].forEach((eventType) => {
-    element.addEventListener(eventType, () => {
-      const mockup = document.querySelector(".mockup1M114");
-
-      // Ajoute la classe "animated" pour rendre l'état persistant
-      mockup.addEventListener(
-        "animationend",
-        () => {
-          section.classList.add("animated");
-        },
-        { once: true }
-      ); // "once" garantit que l'écouteur se retire après la première exécution
-    });
-  });
+gsap.from(".mockupM114", {
+  scrollTrigger: ".sectionOne",
+  x: "-300%",
+  duration: 2,
+  ease: "power2.out",
 });
 
-// section 3
+// Section 2
+
+gsap.from(".projetSec3", {
+  scrollTrigger: ".projetSec3",
+  x: "10%", // Déplacement du bas vers le haut
+  opacity: 0,
+  duration: 2,
+  ease: "power2.out",
+});
+
+
+// Section 3
 
 const panels = document.querySelectorAll(".panel");
 panels.forEach((panel) => {
@@ -67,22 +67,57 @@ function removeActiveClasses() {
     panel.classList.remove("active");
   });
 }
-// // Section 5
 
-const section5 = document.querySelector(".sectionFive");
-const mockupIphone = document.querySelector(".mockupIphone");
-const mockupTablette = document.querySelector(".mockupTablette");
+// Section 4
 
-["mouseenter", "touchmove"].forEach((eventType) => {
-  section5.addEventListener(
-    eventType,
-    () => {
-      mockupIphone.classList.add("animated1");
-      mockupTablette.classList.add("animated2");
-    },
-    { once: true }
-  ); // L'événement ne s'exécutera qu'une seule fois
+gsap.from(".sectionFour", {
+  scrollTrigger: ".sectionFour",
+  y: "10%",
+  opacity: 0,
+  duration: 1.6,
+  ease: "power2.out",
 });
+
+
+
+
+// Section 5
+
+gsap.from(".mockupIphone", {
+  scrollTrigger: ".sectionFive",
+  x: "300%",
+  duration: 2,
+  ease: "power2.out",
+});
+
+gsap.from(".mockupTablette", {
+  scrollTrigger: ".sectionFive",
+  x: "-200%",
+  duration: 2,
+  ease: "power2.out",
+});
+
+
+// Section 7
+
+
+gsap.from(".sectionSix h2", {
+  scrollTrigger: ".bloc2Six",
+  y: "50%",
+  opacity: 0,
+  duration: 1.6,
+  ease: "power2.out",
+});
+
+gsap.from(".sectionSeven h2", {
+  scrollTrigger: ".circleEffect",
+  y: "50%",
+  opacity: 0,
+  duration: 1.6,
+  ease: "power2.out",
+});
+
+
 
 // Circle effect
 
@@ -113,10 +148,3 @@ circle.addEventListener("click", function () {
   }
 });
 
-// Footer
-
-const marquee = document.querySelector(".marquee-content");
-
-// Duplique le contenu pour éviter le saut
-const clone = marquee.cloneNode(true);
-marquee.parentElement.appendChild(clone);

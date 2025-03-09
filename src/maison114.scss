@@ -254,18 +254,16 @@ header ul li:hover a {
   // max-width: 1600px;
   height: 100vh;
   padding: 0 400px;
-  margin: 0 auto;
   position: relative;
   overflow: hidden;
-  .mockup1M114 {
+  .mockupM114 {
     position: absolute;
-    top: 50%;
-    left: -50%;
-    transform: translate(-50%, -50%);
-    margin: 0 auto;
     width: 1500px;
     max-width: 1800px;
     z-index: 20;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
     img {
       width: 100%;
       height: auto;
@@ -283,25 +281,6 @@ header ul li:hover a {
   }
 }
 
-.sectionOne:hover .mockup1M114 {
-  animation: slide2 1s ease-out forwards; /* Animation déclenchée au hover */
-}
-
-.sectionOne.animated .mockup1M114 {
-  animation: none; /* Stoppe toute nouvelle animation */
-  left: 50%; /* Position finale */
-  transform: translate(-50%, -50%);
-}
-
-@keyframes slide2 {
-  from {
-    left: -50%;
-  }
-  to {
-    left: 50%;
-  }
-}
-
 @media (max-width: 2150px) {
   .sectionOne {
     padding: 0 100px;
@@ -316,7 +295,7 @@ header ul li:hover a {
 
 @media (max-width: 1300px) {
   .sectionOne {
-    .mockup1M114 {
+    .mockupM114 {
       width: 1400px;
     }
     .blueStick {
@@ -332,7 +311,7 @@ header ul li:hover a {
 
 @media (max-width: 1050px) {
   .sectionOne {
-    .mockup1M114 {
+    .mockupM114 {
       width: 1200px;
     }
   }
@@ -340,7 +319,7 @@ header ul li:hover a {
 
 @media (max-width: 930px) {
   .sectionOne {
-    .mockup1M114 {
+    .mockupM114 {
       width: 1060px;
     }
   }
@@ -352,7 +331,7 @@ header ul li:hover a {
   }
   .sectionOne {
     height: 70vh;
-    .mockup1M114 {
+    .mockupM114 {
       width: 900px;
     }
   }
@@ -360,7 +339,7 @@ header ul li:hover a {
 
 @media (max-width: 750px) {
   .sectionOne {
-    .mockup1M114 {
+    .mockupM114 {
       width: 800px;
     }
   }
@@ -368,7 +347,7 @@ header ul li:hover a {
 
 @media (max-width: 660px) {
   .sectionOne {
-    .mockup1M114 {
+    .mockupM114 {
       width: 700px;
     }
     .blueStick {
@@ -384,7 +363,7 @@ header ul li:hover a {
 
 @media (max-width: 600px) {
   .sectionOne {
-    .mockup1M114 {
+    .mockupM114 {
       width: 600px;
     }
   }
@@ -392,7 +371,7 @@ header ul li:hover a {
 
 @media (max-width: 530px) {
   .sectionOne {
-    .mockup1M114 {
+    .mockupM114 {
       width: 520px;
     }
   }
@@ -400,7 +379,7 @@ header ul li:hover a {
 
 @media (max-width: 470px) {
   .sectionOne {
-    .mockup1M114 {
+    .mockupM114 {
       width: 450px;
     }
   }
@@ -408,7 +387,7 @@ header ul li:hover a {
 
 @media (max-width: 375px) {
   .sectionOne {
-    .mockup1M114 {
+    .mockupM114 {
       width: 450px;
     }
   }
@@ -621,7 +600,9 @@ header ul li:hover a {
     .mockupTablette {
       position: absolute;
       z-index: 40;
-      left: -200%;
+      transform: translate(-50%, -50%);
+      top: 50%;
+      left: 45%;
       img {
         width: 900px;
       }
@@ -629,7 +610,9 @@ header ul li:hover a {
     .mockupIphone {
       position: absolute;
       z-index: 50;
-      left: -200%;
+      transform: translate(-50%, -50%);
+      top: 60%;
+      left: 70%;
       img {
         width: 500px;
       }
@@ -637,41 +620,7 @@ header ul li:hover a {
   }
 }
 
-.animated1 {
-  animation: slide3 0.8s ease-out forwards; /* Animation déclenchée au hover */
-}
 
-.animated2 {
-  animation: slide4 0.8s ease-out forwards; /* Animation déclenchée au hover */
-}
-
-// .sectionFive.animated .mockupIphone {
-//     animation: none; /* Stoppe toute nouvelle animation */
-//     left: 53%; /* Position finale */
-// }
-
-.sectionFive.animated .mockupTablette {
-  animation: none; /* Stoppe toute nouvelle animation */
-  left: 13%; /* Position finale */
-}
-
-@keyframes slide3 {
-  from {
-    left: -100%;
-  }
-  to {
-    left: 56%;
-  }
-}
-
-@keyframes slide4 {
-  from {
-    left: -100%;
-  }
-  to {
-    left: 14%;
-  }
-}
 
 // ---------------------------------------------------------------
 
@@ -1170,34 +1119,6 @@ a[href^="tel"] {
     }
   }
 
-  .sectionFive.animated .mockupIphone {
-    animation: none; /* Stoppe toute nouvelle animation */
-    left: 54%; /* Position finale */
-  }
-
-  .sectionFive.animated .mockupTablette {
-    animation: none; /* Stoppe toute nouvelle animation */
-    left: 8%; /* Position finale */
-  }
-
-  @keyframes slide3 {
-    from {
-      left: 100%;
-    }
-    to {
-      left: 54%;
-    }
-  }
-
-  @keyframes slide4 {
-    from {
-      left: -100%;
-    }
-    to {
-      left: 8%;
-    }
-  }
-
   .sectionSix {
     .bloc2Six {
       flex-direction: column;
@@ -1404,33 +1325,6 @@ a[href^="tel"] {
     }
   }
 
-  .sectionFive.animated .mockupIphone {
-    animation: none; /* Stoppe toute nouvelle animation */
-    left: 52%; /* Position finale */
-  }
-
-  .sectionFive.animated .mockupTablette {
-    animation: none; /* Stoppe toute nouvelle animation */
-    left: 4%; /* Position finale */
-  }
-
-  //   @keyframes slide3 {
-  //       from {
-  //           left: 100%;
-  //       }
-  //       to {
-  //           left: 52%;
-  //       }
-  //   }
-
-  //   @keyframes slide4 {
-  //       from {
-  //           left: -100%;
-  //       }
-  //       to {
-  //           left: 4%;
-  //       }
-  //   }
   .sectionSix {
     padding: 0 24px;
     margin-top: 100px;

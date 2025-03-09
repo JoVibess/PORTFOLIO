@@ -91,8 +91,9 @@ body::before {
   font-weight: 900; /* Poids pour Black */
   font-style: normal;
 }
-header ul li:hover, header ul li:active {
-  background: #3C76F3;
+header ul li:hover,
+header ul li:active {
+  background: #3c76f3;
   transform: translateX(-50px);
 }
 
@@ -110,7 +111,7 @@ header ul li::before {
 }
 
 header ul li:hover::before {
-  background-color: #1E4AA9;
+  background-color: #1e4aa9;
 }
 
 header ul li::after {
@@ -127,7 +128,7 @@ header ul li::after {
 }
 
 header ul li:hover::after {
-  background-color: #3464CB;
+  background-color: #3464cb;
 }
 
 header {
@@ -224,21 +225,19 @@ header ul li:hover a {
   width: 100%;
   height: 100vh;
   padding: 0 400px;
-  margin: 0 auto;
   position: relative;
   overflow: hidden;
 }
-.sectionOne .mockup1M114 {
+.sectionOne .mockupM114 {
   position: absolute;
-  top: 50%;
-  left: -50%;
-  transform: translate(-50%, -50%);
-  margin: 0 auto;
   width: 1500px;
   max-width: 1800px;
   z-index: 20;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
 }
-.sectionOne .mockup1M114 img {
+.sectionOne .mockupM114 img {
   width: 100%;
   height: auto;
 }
@@ -250,27 +249,9 @@ header ul li:hover a {
 .sectionOne .blueStick .stick {
   width: 18%;
   border-radius: 100px 0;
-  background: linear-gradient(to bottom, #131314, #306AE8);
+  background: linear-gradient(to bottom, #131314, #306ae8);
 }
 
-.sectionOne:hover .mockup1M114 {
-  animation: slide2 1s ease-out forwards; /* Animation déclenchée au hover */
-}
-
-.sectionOne.animated .mockup1M114 {
-  animation: none; /* Stoppe toute nouvelle animation */
-  left: 50%; /* Position finale */
-  transform: translate(-50%, -50%);
-}
-
-@keyframes slide2 {
-  from {
-    left: -50%;
-  }
-  to {
-    left: 50%;
-  }
-}
 @media (max-width: 2150px) {
   .sectionOne {
     padding: 0 100px;
@@ -282,7 +263,7 @@ header ul li:hover a {
   }
 }
 @media (max-width: 1300px) {
-  .sectionOne .mockup1M114 {
+  .sectionOne .mockupM114 {
     width: 1400px;
   }
   .sectionOne .blueStick #stick5 {
@@ -293,12 +274,12 @@ header ul li:hover a {
   }
 }
 @media (max-width: 1050px) {
-  .sectionOne .mockup1M114 {
+  .sectionOne .mockupM114 {
     width: 1200px;
   }
 }
 @media (max-width: 930px) {
-  .sectionOne .mockup1M114 {
+  .sectionOne .mockupM114 {
     width: 1060px;
   }
 }
@@ -309,17 +290,17 @@ header ul li:hover a {
   .sectionOne {
     height: 70vh;
   }
-  .sectionOne .mockup1M114 {
+  .sectionOne .mockupM114 {
     width: 900px;
   }
 }
 @media (max-width: 750px) {
-  .sectionOne .mockup1M114 {
+  .sectionOne .mockupM114 {
     width: 800px;
   }
 }
 @media (max-width: 660px) {
-  .sectionOne .mockup1M114 {
+  .sectionOne .mockupM114 {
     width: 700px;
   }
   .sectionOne .blueStick #stick4 {
@@ -330,22 +311,22 @@ header ul li:hover a {
   }
 }
 @media (max-width: 600px) {
-  .sectionOne .mockup1M114 {
+  .sectionOne .mockupM114 {
     width: 600px;
   }
 }
 @media (max-width: 530px) {
-  .sectionOne .mockup1M114 {
+  .sectionOne .mockupM114 {
     width: 520px;
   }
 }
 @media (max-width: 470px) {
-  .sectionOne .mockup1M114 {
+  .sectionOne .mockupM114 {
     width: 450px;
   }
 }
 @media (max-width: 375px) {
-  .sectionOne .mockup1M114 {
+  .sectionOne .mockupM114 {
     width: 450px;
   }
 }
@@ -416,7 +397,7 @@ header ul li:hover a {
   font-family: "CustomFont1", sans-serif;
   font-size: 7.6rem;
   font-weight: 700;
-  color: #306AE8;
+  color: #306ae8;
 }
 
 #iconeDate {
@@ -492,7 +473,8 @@ header ul li:hover a {
 .sectionThree .container .panel.active {
   flex: 5;
 }
-.sectionThree .container .panel.active h2, .sectionThree .container .panel.active p {
+.sectionThree .container .panel.active h2,
+.sectionThree .container .panel.active p {
   opacity: 1;
 }
 .sectionThree .container .panel.active.fond {
@@ -529,7 +511,7 @@ header ul li:hover a {
   width: 100%;
   height: 100%;
   border-radius: 0 0px 100px 100px;
-  background: linear-gradient(to bottom, #131314, #306AE8);
+  background: linear-gradient(to bottom, #131314, #306ae8);
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -537,7 +519,9 @@ header ul li:hover a {
 .sectionFive .blocFive .mockupTablette {
   position: absolute;
   z-index: 40;
-  left: -200%;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 45%;
 }
 .sectionFive .blocFive .mockupTablette img {
   width: 900px;
@@ -545,41 +529,14 @@ header ul li:hover a {
 .sectionFive .blocFive .mockupIphone {
   position: absolute;
   z-index: 50;
-  left: -200%;
+  transform: translate(-50%, -50%);
+  top: 60%;
+  left: 70%;
 }
 .sectionFive .blocFive .mockupIphone img {
   width: 500px;
 }
 
-.animated1 {
-  animation: slide3 0.8s ease-out forwards; /* Animation déclenchée au hover */
-}
-
-.animated2 {
-  animation: slide4 0.8s ease-out forwards; /* Animation déclenchée au hover */
-}
-
-.sectionFive.animated .mockupTablette {
-  animation: none; /* Stoppe toute nouvelle animation */
-  left: 13%; /* Position finale */
-}
-
-@keyframes slide3 {
-  from {
-    left: -100%;
-  }
-  to {
-    left: 56%;
-  }
-}
-@keyframes slide4 {
-  from {
-    left: -100%;
-  }
-  to {
-    left: 14%;
-  }
-}
 .sectionSix {
   display: flex;
   flex-direction: column;
@@ -616,7 +573,7 @@ header ul li:hover a {
   text-transform: uppercase;
   font-size: 1.2rem;
   font-weight: 600;
-  color: #306AE8;
+  color: #306ae8;
 }
 .sectionSix .bloc2Six .titreSix .blocTitreSix {
   display: flex;
@@ -677,7 +634,7 @@ header ul li:hover a {
   text-transform: uppercase;
   font-size: 1.2rem;
   font-weight: 600;
-  color: #306AE8;
+  color: #306ae8;
 }
 .sectionSix .bloc2Six .texteSix .texteRegular {
   margin-top: 30px;
@@ -749,27 +706,27 @@ header ul li:hover a {
 }
 .sectionSeven .colorbloc .bluebloc .blue1 {
   width: 40%;
-  background-color: #21618C;
+  background-color: #21618c;
 }
 .sectionSeven .colorbloc .bluebloc .blue2 {
   width: 12%;
-  background-color: #336C93;
+  background-color: #336c93;
 }
 .sectionSeven .colorbloc .bluebloc .blue3 {
   width: 12%;
-  background-color: #44789A;
+  background-color: #44789a;
 }
 .sectionSeven .colorbloc .bluebloc .blue4 {
   width: 12%;
-  background-color: #5683A1;
+  background-color: #5683a1;
 }
 .sectionSeven .colorbloc .bluebloc .blue5 {
   width: 12%;
-  background-color: #678DA7;
+  background-color: #678da7;
 }
 .sectionSeven .colorbloc .bluebloc .blue6 {
   width: 12%;
-  background-color: #7898AE;
+  background-color: #7898ae;
 }
 .sectionSeven .colorbloc .graybloc {
   width: 45%;
@@ -784,14 +741,14 @@ header ul li:hover a {
 }
 .sectionSeven .colorbloc .graybloc .gray1 {
   width: 40%;
-  background-color: #7E7E78;
+  background-color: #7e7e78;
 }
 .sectionSeven .colorbloc .graybloc .gray2 {
   background-color: #868681;
   width: 12%;
 }
 .sectionSeven .colorbloc .graybloc .gray3 {
-  background-color: #8F8F8A;
+  background-color: #8f8f8a;
   width: 12%;
 }
 .sectionSeven .colorbloc .graybloc .gray4 {
@@ -799,11 +756,11 @@ header ul li:hover a {
   width: 12%;
 }
 .sectionSeven .colorbloc .graybloc .gray5 {
-  background-color: #9F9F9B;
+  background-color: #9f9f9b;
   width: 12%;
 }
 .sectionSeven .colorbloc .graybloc .gray6 {
-  background-color: #A7A7A4;
+  background-color: #a7a7a4;
   width: 12%;
 }
 .sectionSeven .circleEffect {
@@ -823,7 +780,7 @@ header ul li:hover a {
   position: relative;
   width: 200px;
   height: 200px;
-  background: linear-gradient(90deg, #21618C, #7E7E78);
+  background: linear-gradient(90deg, #21618c, #7e7e78);
   border-radius: 50%;
   cursor: pointer;
 }
@@ -831,7 +788,7 @@ header ul li:hover a {
 .particles {
   position: absolute;
   border-radius: 50%;
-  background: linear-gradient(90deg, #21618C, #7E7E78);
+  background: linear-gradient(90deg, #21618c, #7e7e78);
   z-index: -1;
 }
 
@@ -1033,30 +990,6 @@ a[href^=tel] {
   .sectionFive .blocFive .mockupIphone img {
     width: 380px;
   }
-  .sectionFive.animated .mockupIphone {
-    animation: none; /* Stoppe toute nouvelle animation */
-    left: 54%; /* Position finale */
-  }
-  .sectionFive.animated .mockupTablette {
-    animation: none; /* Stoppe toute nouvelle animation */
-    left: 8%; /* Position finale */
-  }
-  @keyframes slide3 {
-    from {
-      left: 100%;
-    }
-    to {
-      left: 54%;
-    }
-  }
-  @keyframes slide4 {
-    from {
-      left: -100%;
-    }
-    to {
-      left: 8%;
-    }
-  }
   .sectionSix .bloc2Six {
     flex-direction: column;
     align-items: center;
@@ -1218,14 +1151,6 @@ a[href^=tel] {
   .sectionFive .blocFive .mockupIphone img {
     width: 165px;
   }
-  .sectionFive.animated .mockupIphone {
-    animation: none; /* Stoppe toute nouvelle animation */
-    left: 52%; /* Position finale */
-  }
-  .sectionFive.animated .mockupTablette {
-    animation: none; /* Stoppe toute nouvelle animation */
-    left: 4%; /* Position finale */
-  }
   .sectionSix {
     padding: 0 24px;
     margin-top: 100px;
@@ -1315,10 +1240,10 @@ a[href^=tel] {
   .sectionSeven .circleEffect .circle {
     width: 90px;
     height: 90px;
-    background: linear-gradient(180deg, #21618C, #7E7E78);
+    background: linear-gradient(180deg, #21618c, #7e7e78);
   }
   .particles {
-    background: linear-gradient(180deg, #21618C, #7E7E78);
+    background: linear-gradient(180deg, #21618c, #7e7e78);
   }
   footer {
     margin-top: 70px;

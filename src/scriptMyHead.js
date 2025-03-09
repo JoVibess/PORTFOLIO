@@ -387,7 +387,7 @@ const tick = () => {
   stats.begin();
 
   if (model) {
-    model.rotation.y += 0.005;
+    model.rotation.y += 0.004;
   }
 
   // Render
