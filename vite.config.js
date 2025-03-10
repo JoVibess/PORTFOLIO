@@ -25,4 +25,10 @@ export default {
     [
         restart({ restart: [ '../static/**', ] }) // Restart server on static file change
     ],
+    resolve: {
+        alias: {
+            '/maison114': '/maison114.html',
+            '/soulSight': '/soulSight.html'
+        }
+    }
 }
