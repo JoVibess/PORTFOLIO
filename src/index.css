@@ -54,6 +54,12 @@ body::before {
   font-style: normal;
 }
 @font-face {
+  font-family: "CustomFont3";
+  src: url("/font/Ruthligos.woff2") format("woff2");
+  font-weight: 400; /* Poids pour Regular */
+  font-style: normal;
+}
+@font-face {
   font-family: "CustomFont2";
   src: url("/font/Guton-Regular.woff2") format("woff2");
   font-weight: 400; /* Poids pour Regular */
@@ -216,17 +222,52 @@ header ul li:hover a {
   }
 }
 .sectionOne {
-  margin: auto;
   width: 100%;
-  height: 80vh;
-  background-color: #2e3133;
-  position: relative;
+  height: 90vh;
+  background-image: url("/img/indexBackground.webp");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: scaleX(-1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sectionOne .textSectionOne {
+  transform: scaleX(-1);
+  color: white;
+  padding: 0 60px;
+}
+.sectionOne .textSectionOne #title1 {
+  font-family: "CustomFont1", sans-serif;
+  font-size: 5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: end;
+}
+.sectionOne .textSectionOne #title2 {
+  font-family: "CustomFont1", sans-serif;
+  font-size: 5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  font-style: italic;
+  color: transparent; /* Rendre l'intérieur du texte transparent */
+  -webkit-text-stroke: 2px white; /* Contour noir de 1px */
+  display: flex;
+  justify-content: center;
+}
+.sectionOne #title3 {
+  font-family: "CustomFont1", sans-serif;
+  font-size: 5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-right: 70px;
 }
 
 .sectionTwo {
   width: 100%;
   max-width: 1600px;
-  padding: 0 24px;
   margin: 0 auto;
   color: white;
   margin: 100px auto;
@@ -238,7 +279,7 @@ header ul li:hover a {
   height: 700px;
 }
 .sectionTwo .sectionTwoContent .about {
-  width: 50%;
+  width: 60%;
   text-align: justify;
   display: flex;
   flex-direction: column;
@@ -297,7 +338,7 @@ header ul li:hover a {
   top: -56px;
 }
 .sectionTwo .sectionTwoContent .myHead {
-  width: 50%;
+  width: 40%;
 }
 .sectionTwo .sectionTwoContent .myHead .webgl {
   width: 100%;
@@ -437,6 +478,24 @@ a[href^=tel] {
   }
   header {
     padding: 0 24px;
+  }
+  .sectionOne {
+    height: 60vh;
+  }
+  .sectionOne .textSectionOne {
+    transform: scaleX(-1);
+    color: white;
+    padding: 0 60px;
+  }
+  .sectionOne .textSectionOne #title1 {
+    font-size: 3rem;
+  }
+  .sectionOne .textSectionOne #title2 {
+    font-size: 3rem;
+    -webkit-text-stroke: 1px white; /* Contour noir de 1px */
+  }
+  .sectionOne #title3 {
+    font-size: 3rem;
   }
   .sectionTwo {
     width: 100%;
