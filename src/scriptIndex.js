@@ -79,3 +79,44 @@ gsap.from("#text3", {
   opacity: 0,
   ease: "power2.out",
 });
+
+gsap.from("#title1", {
+  scrollTrigger: "#title1",
+  x: -300, 
+  duration: 1,
+  opacity: 0,
+  ease: "power2.out",
+});
+
+gsap.from("#title3", {
+  scrollTrigger: "#title3",
+  x: 300, 
+  duration: 1,
+  opacity: 0,
+  ease: "power2.out",
+});
+
+gsap.from("#letter1", {
+  scrollTrigger: "#title2",
+  x: -500, 
+  duration: 1,
+  rotation: 360,
+  opacity: 0,
+  ease: "power2.out",
+});
+gsap.from("#letter2", {
+  scrollTrigger: "#title2",
+  x: 500, 
+  duration: 0.8,
+  rotation: -360,
+  opacity: 0,
+  ease: "power2.out",
+});
+gsap.from("#letter3", {
+  scrollTrigger: "#title2",
+  x: 400, 
+  duration: 1,
+  rotation: -360,
+  opacity: 0,
+  ease: "power2.out",
+});
