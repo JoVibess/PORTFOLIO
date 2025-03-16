@@ -97,7 +97,7 @@ gsap.from("#title3", {
 });
 
 gsap.from("#letter1", {
-  scrollTrigger: "#title2",
+  scrollTrigger: "#letter1",
   x: -500, 
   duration: 1,
   rotation: 360,
@@ -105,7 +105,7 @@ gsap.from("#letter1", {
   ease: "power2.out",
 });
 gsap.from("#letter2", {
-  scrollTrigger: "#title2",
+  scrollTrigger: "#letter2",
   x: 500, 
   duration: 0.8,
   rotation: -360,
@@ -113,7 +113,7 @@ gsap.from("#letter2", {
   ease: "power2.out",
 });
 gsap.from("#letter3", {
-  scrollTrigger: "#title2",
+  scrollTrigger: "#letter3",
   x: 400, 
   duration: 1,
   rotation: -360,

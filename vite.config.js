@@ -17,7 +17,8 @@ export default {
             input: {
               home: "src/index.html",
               maison114: "src/maison114.html",
-              soulSight: "src/soulSight.html"
+              soulSight: "src/soulSight.html",
+              contact: "src/contact.html"
             },
         },
     },
