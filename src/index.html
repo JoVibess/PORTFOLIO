@@ -201,15 +201,19 @@
 
       <section class="sectionThree">
         <div class="projGroup1">
-            <div class="proj">
-              <img src="/img/proj1A.webp" alt="" />
-              <img src="/img/proj1B.webp" alt="" />
-              <h2><a href="https://joeydecroix.com/maison114.html">Maison 114</a></h2>
-            </div>
+          <div class="proj">
+            <img src="/img/proj1A.webp" alt="" />
+            <img src="/img/proj1B.webp" alt="" />
+            <h2>
+              <a href="https://joeydecroix.com/maison114.html">Maison 114</a>
+            </h2>
+          </div>
           <div class="proj">
             <img src="/img/proj1C.webp" alt="" />
             <img src="/img/proj1D.webp" alt="" />
-            <h2><a href="https://joeydecroix.com/soulsight.html">SoulSight</a></h2>
+            <h2>
+              <a href="https://joeydecroix.com/soulSight.html">SoulSight</a>
+            </h2>
           </div>
         </div>
       </section>
@@ -299,29 +303,18 @@
   <script type="module">
     import hoverEffect from "./hover-effect.js";
 
-    // Fonction pour activer l'effet
-    function activateHoverEffect(e) {
-      const imgs = Array.from(e.querySelectorAll("img"));
-      new hoverEffect({
-        parent: e,
-        intensity: 0.3,
-        image1: imgs[0].getAttribute("src"),
-        image2: imgs[1].getAttribute("src"),
-        displacementImage: "/img/hoverEffect/7.jpg",
+    if (!window.matchMedia("(pointer: coarse)").matches) {
+      // Exécuter seulement si ce n'est pas un écran tactile
+      Array.from(document.querySelectorAll(".proj")).forEach((e) => {
+        const imgs = Array.from(e.querySelectorAll("img"));
+        new hoverEffect({
+          parent: e,
+          intensity: 0.3,
+          image1: imgs[0].getAttribute("src"),
+          image2: imgs[1].getAttribute("src"),
+          displacementImage: "/img/hoverEffect/7.jpg",
+        });
       });
     }
-
-    // Sélection des éléments `.proj`
-    document.querySelectorAll(".proj").forEach((e) => {
-      // Si l'appareil est tactile, activer l'effet au toucher
-      if ("ontouchstart" in window) {
-        e.addEventListener("touchstart", () => activateHoverEffect(e), {
-          once: true,
-        });
-      } else {
-        // Sinon, l'effet est activé normalement au hover
-        activateHoverEffect(e);
-      }
-    });
   </script>
 </html>
