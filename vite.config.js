@@ -25,5 +25,5 @@ export default {
     [
         restart({ restart: [ '../static/**', ] }) // Restart server on static file change
     ],
-    assetsInclude: ['**/*.html'] // 👈 Ajoute cette ligne pour exclure les fichiers HTML de l'analyse JS
+    // assetsInclude: ['**/*.html'] // 👈 Ajoute cette ligne pour exclure les fichiers HTML de l'analyse JS
 }
