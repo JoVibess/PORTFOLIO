@@ -5,8 +5,8 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JDX</title>
-    <link rel="stylesheet" href="/index.css"/>
-    <link rel="icon" type="image/png" href="/img/iconeSite.png">
+    <link rel="stylesheet" href="/index.css" />
+    <link rel="icon" type="image/png" href="/img/iconeSite.png" />
   </head>
 
   <body>
@@ -36,7 +36,9 @@
             <li style="--i: 2">
               <a href="https://joeydecroix.com/maison114.html">Projects</a>
             </li>
-            <li style="--i: 1"><a href="https://joeydecroix.com/contact.html">Contact</a></li>
+            <li style="--i: 1">
+              <a href="https://joeydecroix.com/contact.html">Contact</a>
+            </li>
           </ul>
         </nav>
       </div>
@@ -45,20 +47,12 @@
     <main>
       <section class="sectionOne">
         <div class="textSectionOne">
-          <!-- <p id="title1">Creative</p>
-          <div id="title2">
-            <div id="letter1"><p>W</p></div>
-            <div id="letter2"><p>E</p></div>
-            <div id="letter3"><p>B</p></div>
-          </div>
-          <p id="title3">Developer</p> -->
           <h1>
             <span id="title1">Creative</span>
             <br /><span id="letter1">W</span>
             <span id="letter2">E</span>
             <span id="letter3">B</span>
-            <br /><span id="title3">Developer</span
-            >
+            <br /><span id="title3">Developer</span>
           </h1>
         </div>
       </section>
@@ -206,8 +200,18 @@
             </div> -->
 
       <section class="sectionThree">
-        <div id="proj1"></div>
-        <div id="proj2"></div>
+        <div class="projGroup1">
+            <div class="proj">
+              <img src="/img/proj1A.webp" alt="" />
+              <img src="/img/proj1B.webp" alt="" />
+              <h2><a href="https://joeydecroix.com/maison114.html">Maison 114</a></h2>
+            </div>
+          <div class="proj">
+            <img src="/img/proj1C.webp" alt="" />
+            <img src="/img/proj1D.webp" alt="" />
+            <h2><a href="https://joeydecroix.com/soulsight.html">SoulSight</a></h2>
+          </div>
+        </div>
       </section>
     </main>
 
@@ -290,4 +294,34 @@
 
   <script type="module" src="./scriptIndex.js"></script>
   <script type="module" src="./scriptMyHead.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script type="module" src="./hover-effect.js"></script>
+  <script type="module">
+    import hoverEffect from "./hover-effect.js";
+
+    // Fonction pour activer l'effet
+    function activateHoverEffect(e) {
+      const imgs = Array.from(e.querySelectorAll("img"));
+      new hoverEffect({
+        parent: e,
+        intensity: 0.3,
+        image1: imgs[0].getAttribute("src"),
+        image2: imgs[1].getAttribute("src"),
+        displacementImage: "/img/hoverEffect/7.jpg",
+      });
+    }
+
+    // Sélection des éléments `.proj`
+    document.querySelectorAll(".proj").forEach((e) => {
+      // Si l'appareil est tactile, activer l'effet au toucher
+      if ("ontouchstart" in window) {
+        e.addEventListener("touchstart", () => activateHoverEffect(e), {
+          once: true,
+        });
+      } else {
+        // Sinon, l'effet est activé normalement au hover
+        activateHoverEffect(e);
+      }
+    });
+  </script>
 </html>

@@ -5,7 +5,6 @@ $bleu: #306ae8;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow-x: hidden;
 }
 
 html {
@@ -312,7 +311,6 @@ header ul li:hover a {
 .sectionTwo {
   width: 100%;
   max-width: 1600px;
-  margin: 0 auto;
   color: white;
   margin: 100px auto;
   padding: 0 60px;
@@ -393,53 +391,58 @@ header ul li:hover a {
 
 // Section Three
 
-.item_content {
-  h2 {
-    margin-top: 0;
-    margin-bottom: 1rem;
-    font-weight: 700;
-    line-height: 1.2;
-    font-family: "CustomFont1", sans-serif;
-    font-size: 3.2rem;
-    text-transform: uppercase;
+.sectionThree {
+  width: 100%;
+  max-width: 1600px;
+  color: white;
+  margin: 100px auto;
+  padding: 0 60px;
+  position: relative;
+  .projGroup1{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .proj{
+      position: relative;
+      width: 765px;
+      height: 510px;
+      margin: 24px;
+      img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: none;
+      }
+      h2{
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+        font-family: "CustomFont1", sans-serif;
+        font-size: 2.7rem;
+        text-transform: uppercase;
+        letter-spacing: 0.2px;
+        text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+        a{
+          color: white;
+        }
+
+      }
+    }
   }
 }
 
-//   .custom-btn {
-//     margin-top: 28px;
-//     padding: 10px 40px;
-//     background-color: transparent;
-//     border: 1px solid #fff;
-//     border-radius: 16px;
-//     font-size: 0.8rem;
-//     font-weight: 200;
-//     font-family: 'CustomFont2', sans-serif;
-//     text-transform: uppercase;
-//     color: #fff;
-//     text-decoration: none;
-//     box-shadow: 0 0 0;
-//     transition: all 200ms;
-//   }
-//   .custom-btn:hover {
-//     transform: translateY(-6px);
-//     box-shadow: 0px 8px 1px #fff;
-//   }
-//   .custom-btn:active {
-//     transform: translateY(6px);
-//     box-shadow: 0 0 0;
-//   }
-
-// button:hover {
-//     background: $bleu;
-//     color: white;
-// }
-// }
 
 footer {
   display: flex;
   flex-direction: column;
   margin-inline: auto;
-  margin-top: 200px;
+  margin-top: 130px;
   margin-bottom: 30px;
   color: white;
   width: 100%;
@@ -564,6 +567,18 @@ a[href^="tel"] {
   html {
     font-size: 15px;
   }
+  .sectionThree {
+    padding: 0 24px;
+    .projGroup1 {
+      flex-direction: column; 
+      .proj{
+        width: 900px;
+        height: 600px;
+      }
+    }
+  }
+
+
 }
 
 @media (max-width: 500px) {
@@ -642,6 +657,18 @@ a[href^="tel"] {
           width: 100%;
           height: 100%;
         }
+      }
+    }
+  }
+  .sectionThree {
+    margin: 60px auto;
+    padding: 0 24px;
+    .projGroup1 {
+      flex-direction: column; 
+      .proj{
+        width: 360px;
+        height: 240px;
+        margin: 10px;
       }
     }
   }
