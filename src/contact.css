@@ -1,9 +1,9 @@
 @charset "UTF-8";
 * {
-  text-decoration: none;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  text-decoration: none;
 }
 
 html {
@@ -222,198 +222,47 @@ header ul li:hover a {
   }
 }
 .sectionOne {
+  color: white;
   width: 100%;
-  height: 90vh;
+  max-width: 1600px;
+  padding: 100px 60px;
+  margin: 0 auto;
   background-image: url("/img/indexBackground.webp");
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
   transform: scaleX(-1);
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
-.sectionOne .textSectionOne {
+.sectionOne .first h1 {
+  font-family: "CustomFont1", sans-serif;
+  text-transform: uppercase;
+  font-size: 6rem;
   transform: scaleX(-1);
-  color: white;
-  padding: 0 60px;
+  margin-top: -20px;
 }
-.sectionOne .textSectionOne h1 {
-  text-align: end;
-}
-.sectionOne .textSectionOne h1 span {
-  display: inline-block;
-}
-.sectionOne .textSectionOne h1 #title1 {
-  font-family: "CustomFont1", sans-serif;
-  font-size: 5rem;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-.sectionOne .textSectionOne h1 #letter1,
-.sectionOne .textSectionOne h1 #letter2,
-.sectionOne .textSectionOne h1 #letter3 {
-  font-family: "CustomFont1", sans-serif;
-  font-size: 5rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  text-align: center;
-  font-style: italic;
-  color: transparent; /* Rendre l'intérieur du texte transparent */
-  -webkit-text-stroke: 2px white; /* Contour noir de 1px */
-}
-.sectionOne .textSectionOne h1 #letter3 {
-  margin-right: 180px;
-}
-.sectionOne .textSectionOne h1 #title3 {
-  font-family: "CustomFont1", sans-serif;
-  font-size: 5rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  margin-right: 150px;
-}
-
-.sectionTwo {
-  width: 100%;
-  max-width: 1600px;
-  margin: 0 auto;
-  color: white;
-  margin: 100px auto;
-  padding: 0 60px;
-}
-.sectionTwo .sectionTwoContent {
-  display: flex;
-  width: 100%;
-  height: 700px;
-}
-.sectionTwo .sectionTwoContent .about {
-  width: 60%;
-  text-align: justify;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.sectionTwo .sectionTwoContent .about .aboutTitle {
-  display: flex;
-  position: relative;
-}
-.sectionTwo .sectionTwoContent .about .aboutTitle img {
-  position: absolute;
-  width: 80px;
-  height: 80px;
-  left: 450px;
-  bottom: 30px;
-}
-.sectionTwo .sectionTwoContent .about h2 {
-  font-family: "CustomFont1", sans-serif;
-  font-size: 4rem;
-  font-weight: 700;
-  color: #306ae8;
-  text-transform: uppercase;
-}
-.sectionTwo .sectionTwoContent .about .separator {
-  width: 100%;
-  height: 4px;
-  background: linear-gradient(to right, #007bff, #131314);
-  margin-bottom: 30px;
-  margin-top: 6px;
-  border-radius: 50px;
-}
-.sectionTwo .sectionTwoContent .about p {
-  font-size: 0.9rem;
-  font-family: "CustomFont2", sans-serif;
-  line-height: 40px;
-  letter-spacing: 0.2px;
-  font-weight: 200;
-  padding-bottom: 18px;
-}
-.sectionTwo .sectionTwoContent .about .mee {
-  display: flex;
-  justify-content: flex-end;
-  position: relative;
-}
-.sectionTwo .sectionTwoContent .about .mee p {
-  font-size: 1.4rem;
-  font-family: "CustomFont2", sans-serif;
-  font-style: italic;
-  color: #306ae8;
-  padding: 0;
-}
-.sectionTwo .sectionTwoContent .about .mee img {
-  width: 100px;
-  position: absolute;
-  right: -124px;
-  top: -56px;
-}
-.sectionTwo .sectionTwoContent .myHead {
-  width: 40%;
-}
-.sectionTwo .sectionTwoContent .myHead .webgl {
-  width: 100%;
-  height: 100%;
-}
-
-.item_content h2 {
-  margin-top: 0;
-  margin-bottom: 1rem;
-  font-weight: 700;
-  line-height: 1.2;
-  font-family: "CustomFont1", sans-serif;
-  font-size: 3.2rem;
-  text-transform: uppercase;
-}
-
-footer {
-  display: flex;
-  flex-direction: column;
-  margin-inline: auto;
-  margin-top: 200px;
-  margin-bottom: 30px;
-  color: white;
-  width: 100%;
-  max-width: 1600px;
-}
-footer .menu1 {
-  z-index: 10;
-}
-footer .menu1 .logo img {
-  width: 100%;
-  max-width: 1600px;
-  padding: 0 60px;
-}
-footer .contact {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  margin-top: 70px;
-}
-footer .contact .contact1 {
-  padding-left: 20px;
-}
-footer .contact .contact1 img {
-  width: 30px;
-}
-footer .contact .contact2 {
-  padding-right: 30px;
-}
-footer .contact .contact2 p {
-  font-family: "CustomFont2", sans-serif;
+.sectionOne .first p {
+  transform: scaleX(-1);
+  margin-bottom: 18px;
   font-size: 0.7rem;
+  font-family: "CustomFont2", sans-serif;
+  line-height: 24px;
+  text-transform: uppercase;
+  font-style: italic;
   letter-spacing: 0.2px;
-  text-align: end;
+  word-spacing: 1px;
 }
-footer .wrapper {
+.sectionOne .first .wrapper {
+  transform: scaleX(-1);
   width: 100%;
   margin-inline: auto;
   position: relative;
   height: 70px;
-  margin-top: 30px;
   border-top: solid 1px white;
   overflow: hidden;
   -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgb(0, 0, 0) 20%, rgb(0, 0, 0) 80%, rgba(0, 0, 0, 0));
           mask-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgb(0, 0, 0) 20%, rgb(0, 0, 0) 80%, rgba(0, 0, 0, 0));
 }
-footer .wrapper .item {
+.sectionOne .first .wrapper .item {
   font-family: "CustomFont2", sans-serif;
   font-size: 0.6rem;
   letter-spacing: 0.2px;
@@ -422,7 +271,7 @@ footer .wrapper .item {
   align-items: center;
   justify-content: center;
   width: 100px;
-  height: 70px;
+  height: 50px;
   position: absolute;
   left: max(1200px, 100%);
   animation-name: scrollLeft;
@@ -430,51 +279,97 @@ footer .wrapper .item {
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
-footer .wrapper .item img {
+.sectionOne .first .wrapper .item img {
   width: 20px;
 }
-footer .wrapper .item1 {
+.sectionOne .first .wrapper .item1 {
   animation-delay: -12.5s;
 }
-footer .wrapper .item2 {
+.sectionOne .first .wrapper .item2 {
   animation-delay: -10s;
 }
-footer .wrapper .item3 {
+.sectionOne .first .wrapper .item3 {
   animation-delay: -7.5s;
 }
-footer .wrapper .item4 {
+.sectionOne .first .wrapper .item4 {
   animation-delay: -5s;
 }
-footer .wrapper .item5 {
+.sectionOne .first .wrapper .item5 {
   animation-delay: -2.5s;
 }
-footer .wrapper .item6 {
+.sectionOne .first .wrapper .item6 {
   animation-delay: 0s;
 }
-footer .wrapper .item7 {
+.sectionOne .first .wrapper .item7 {
   animation-delay: 2.5s;
 }
-footer .wrapper .item8 {
+.sectionOne .first .wrapper .item8 {
   animation-delay: 5s;
 }
-footer .wrapper .item9 {
+.sectionOne .first .wrapper .item9 {
   animation-delay: 7.5s;
 }
-footer .wrapper .item10 {
+.sectionOne .first .wrapper .item10 {
   animation-delay: 10s;
 }
-footer .wrapper .item11 {
+.sectionOne .first .wrapper .item11 {
   animation-delay: 12.5s;
 }
-footer .wrapper .item12 {
+.sectionOne .first .wrapper .item12 {
   animation-delay: 15s;
 }
-
 @keyframes scrollLeft {
   to {
     left: -200px;
   }
 }
+
+.contactInfo {
+  width: 100%;
+  transform: scaleX(-1);
+}
+.contactInfo .email {
+  display: flex;
+  align-items: center;
+}
+.contactInfo .email img {
+  width: 30px;
+  margin-right: 24px;
+}
+.contactInfo .email p {
+  font-family: "CustomFont2", sans-serif;
+  font-size: 0.9rem;
+}
+.contactInfo .phone {
+  display: flex;
+  align-items: center;
+  margin-top: 12px;
+}
+.contactInfo .phone img {
+  width: 30px;
+  margin-right: 24px;
+}
+.contactInfo .phone p {
+  font-family: "CustomFont2", sans-serif;
+  font-size: 0.9rem;
+}
+.contactInfo .linkedIn {
+  display: flex;
+  align-items: center;
+  margin-top: 12px;
+}
+.contactInfo .linkedIn img {
+  width: 30px;
+  margin-right: 24px;
+}
+.contactInfo .linkedIn a {
+  font-family: "CustomFont2", sans-serif;
+  color: white;
+  text-decoration: underline;
+  text-decoration-color: white;
+  font-size: 0.9rem;
+}
+
 a[href^=tel] {
   color: white !important;
   text-decoration: none;
@@ -486,82 +381,32 @@ a[href^=tel] {
   }
 }
 @media (max-width: 500px) {
-  html {
-    font-size: 15px;
-  }
   header {
     padding: 0 24px;
   }
   .sectionOne {
-    height: 60vh;
+    padding: 100px 24px;
   }
-  .sectionOne .textSectionOne {
-    transform: scaleX(-1);
-    color: white;
-    padding: 0 60px;
+  .sectionOne .first h1 {
+    font-size: 3rem;
+    margin-top: -8px;
   }
-  .sectionOne .textSectionOne h1 #title1 {
-    font-size: 2.8rem;
-  }
-  .sectionOne .textSectionOne h1 #letter1,
-  .sectionOne .textSectionOne h1 #letter2,
-  .sectionOne .textSectionOne h1 #letter3 {
-    font-size: 2.8rem;
-    -webkit-text-stroke: 1px white; /* Contour noir de 1px */
-  }
-  .sectionOne .textSectionOne h1 #letter3 {
-    margin-right: 50px;
-  }
-  .sectionOne .textSectionOne h1 #title3 {
-    font-size: 2.8rem;
-    margin-right: 50px;
-  }
-  .sectionTwo {
-    width: 100%;
-    max-width: 1600px;
-    padding: 0 24px;
-    margin: 40px auto;
-  }
-  .sectionTwo .sectionTwoContent {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
-  }
-  .sectionTwo .sectionTwoContent .about {
-    width: 100%;
-    text-align: justify;
-    justify-content: center;
-  }
-  .sectionTwo .sectionTwoContent .about .aboutTitle {
-    display: flex;
-    position: relative;
-  }
-  .sectionTwo .sectionTwoContent .about .aboutTitle img {
-    position: absolute;
-    width: 50px;
+  .sectionOne .first .wrapper {
     height: 50px;
-    left: 270px;
-    bottom: 10px;
   }
-  .sectionTwo .sectionTwoContent .about .aboutTitle h2 {
-    font-size: 3.2rem;
+  .sectionOne .first .wrapper .item img {
+    width: 12px;
   }
-  .sectionTwo .sectionTwoContent .about .mee {
-    display: none;
+  .sectionOne .contactInfo .email img {
+    width: 20px;
+    margin-right: 24px;
   }
-  .sectionTwo .sectionTwoContent .myHead {
-    width: 100%;
-    height: 500px;
+  .sectionOne .contactInfo .phone img {
+    width: 20px;
+    margin-right: 24px;
   }
-  .sectionTwo .sectionTwoContent .myHead .webgl {
-    width: 100%;
-    height: 100%;
+  .sectionOne .contactInfo .linkedIn img {
+    width: 20px;
+    margin-right: 24px;
   }
-  footer {
-    margin-top: 70px;
-  }
-  footer .contact {
-    margin-top: 14px;
-  }
-}/*# sourceMappingURL=index.css.map */
+}/*# sourceMappingURL=contact.css.map */

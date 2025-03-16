@@ -1,0 +1,468 @@
+$bleu: #306ae8;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html {
+  font-size: 20px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  background: #131314;
+}
+body {
+  position: relative; /* Nécessaire pour positionner le pseudo-élément */
+  overflow-x: hidden;
+  width: 100vw;
+}
+
+body::before {
+  content: "";
+  position: fixed; /* Couvre tout l'écran, même au défilement */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 20%;
+  filter: url(#grainy);
+  z-index: 10; /* S'assure que cette couche soit au-dessus de tout */
+  pointer-events: none; /* Permet de cliquer/interagir avec les éléments en dessous */
+}
+
+.svgBackground {
+  height: 0;
+}
+
+// ___________________FONT_____________________
+
+// Titre
+
+@font-face {
+  font-family: "CustomFont1";
+  src: url("/font/GOMERY-Bold.woff2") format("woff2");
+  font-weight: 700; /* Poids pour Bold */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "CustomFont1";
+  src: url("/font/GOMERY-Regular.woff2") format("woff2");
+  font-weight: 400; /* Poids pour Regular */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "CustomFont3";
+  src: url("/font/Ruthligos.woff2") format("woff2");
+  font-weight: 400; /* Poids pour Regular */
+  font-style: normal;
+}
+
+// Texte
+
+@font-face {
+  font-family: "CustomFont2";
+  src: url("/font/Guton-Regular.woff2") format("woff2");
+  font-weight: 400; /* Poids pour Regular */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "CustomFont2";
+  src: url("/font/Guton-Medium.woff2") format("woff2");
+  font-weight: 500; /* Poids pour Medium */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "CustomFont2";
+  src: url("/font/Guton-SemiBold.woff2") format("woff2");
+  font-weight: 600; /* Poids pour SemiBold */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "CustomFont2";
+  src: url("/font/Guton-Bold.woff2") format("woff2");
+  font-weight: 700; /* Poids pour Bold */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "CustomFont2";
+  src: url("/font/Guton-ExtraBold.woff2") format("woff2");
+  font-weight: 800; /* Poids pour ExtraBold */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "CustomFont2";
+  src: url("/font/Guton-Black.woff2") format("woff2");
+  font-weight: 900; /* Poids pour Black */
+  font-style: normal;
+}
+
+// ______________________________________________________________________
+
+// HEADER
+
+header ul li:hover,
+header ul li:active {
+  background: $bleu;
+  transform: translateX(-50px);
+}
+
+header ul li::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -40px;
+  width: 40px;
+  height: 100%;
+  background-color: #2e3133;
+  transform-origin: right;
+  transform: skewY(45deg);
+  transition: 0.5s;
+}
+
+header ul li:hover::before {
+  background-color: #1e4aa9;
+}
+
+header ul li::after {
+  content: "";
+  position: absolute;
+  top: -40px;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  background: #35383e;
+  transform-origin: bottom;
+  transform: skewX(45deg);
+  transition: 0.5s;
+}
+
+header ul li:hover::after {
+  background-color: #3464cb;
+}
+
+header {
+  width: 100%;
+  z-index: 30;
+  display: flex;
+  justify-content: center;
+  padding: 0 60px;
+  flex-direction: column;
+  height: 10vh;
+  font-size: 1rem;
+  font-family: "CustomFont1", sans-serif;
+  .menu1 {
+    display: flex;
+    width: 100%;
+    .logo {
+      width: 50%;
+    }
+    .menu-burger {
+      width: 50%;
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+
+  .menu2 {
+    display: none;
+  }
+
+  .pop-menu-enter {
+    display: flex;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 40px;
+    position: absolute;
+    animation: slideIn 0.5s ease-out forwards;
+    top: 140px;
+  }
+
+  .pop-menu-exit {
+    display: flex;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 40px;
+    position: absolute;
+    animation: slideOut 0.5s ease-out forwards;
+  }
+
+  nav {
+    ul {
+      position: relative;
+      transform: skewY(-15deg);
+      li {
+        position: relative;
+        width: 200px;
+        background: #3e3f46;
+        padding: 15px;
+        z-index: var(--i);
+        transition: 0.5s;
+        a {
+          color: #999;
+          display: block;
+          text-transform: uppercase;
+          letter-spacing: 0.1rem;
+        }
+      }
+    }
+  }
+}
+
+header ul li:hover a {
+  color: #fff;
+}
+
+// header ul li:last-child::after {
+//   box-shadow: -120px 120px 20px rgba(0,0,0,0.25);
+// }
+
+@keyframes slideIn {
+  from {
+    right: -300px;
+  }
+  to {
+    right: 0;
+  }
+}
+
+@keyframes slideOut {
+  from {
+    right: 0px;
+    top: 140px;
+  }
+  to {
+    right: -300px;
+    top: 140px;
+  }
+}
+
+// MAIN
+
+.sectionOne {
+  color: white;
+  width: 100%;
+  max-width: 1600px;
+  padding: 100px 60px;
+  margin: 0 auto;
+  background-image: url("/img/indexBackground.webp");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: scaleX(-1);
+
+  .first {
+    h1 {
+      font-family: "CustomFont1", sans-serif;
+      text-transform: uppercase;
+      font-size: 6rem;
+      transform: scaleX(-1);
+      margin-top: -20px;
+    }
+    p {
+      transform: scaleX(-1);
+      margin-bottom: 18px;
+      font-size: 0.7rem;
+      font-family: "CustomFont2", sans-serif;
+      line-height: 24px;
+      text-transform: uppercase;
+      font-style: italic;
+      letter-spacing: 0.2px;
+      word-spacing: 1px;
+    }
+    .wrapper {
+      transform: scaleX(-1);
+      width: 100%;
+      margin-inline: auto;
+      position: relative;
+      height: 70px;
+      border-top: solid 1px white;
+      overflow: hidden;
+      mask-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 1) 20%,
+        rgba(0, 0, 0, 1) 80%,
+        rgba(0, 0, 0, 0)
+      );
+      .item {
+        font-family: "CustomFont2", sans-serif;
+        font-size: 0.6rem;
+        letter-spacing: 0.2px;
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100px;
+        height: 50px;
+        position: absolute;
+        left: max((100px * 12), 100%);
+        animation-name: scrollLeft;
+        animation-duration: 30s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        img {
+          width: 20px;
+        }
+      }
+      .item1 {
+        animation-delay: calc(30s / 12 * (6 - 1) * -1);
+      }
+      .item2 {
+        animation-delay: calc(30s / 12 * (6 - 2) * -1);
+      }
+      .item3 {
+        animation-delay: calc(30s / 12 * (6 - 3) * -1);
+      }
+      .item4 {
+        animation-delay: calc(30s / 12 * (6 - 4) * -1);
+      }
+      .item5 {
+        animation-delay: calc(30s / 12 * (6 - 5) * -1);
+      }
+      .item6 {
+        animation-delay: calc(30s / 12 * (6 - 6) * -1);
+      }
+      .item7 {
+        animation-delay: calc(30s / 12 * (6 - 7) * -1);
+      }
+      .item8 {
+        animation-delay: calc(30s / 12 * (6 - 8) * -1);
+      }
+      .item9 {
+        animation-delay: calc(30s / 12 * (6 - 9) * -1);
+      }
+      .item10 {
+        animation-delay: calc(30s / 12 * (6 - 10) * -1);
+      }
+      .item11 {
+        animation-delay: calc(30s / 12 * (6 - 11) * -1);
+      }
+      .item12 {
+        animation-delay: calc(30s / 12 * (6 - 12) * -1);
+      }
+    }
+  }
+
+  @keyframes scrollLeft {
+    to {
+      left: -200px;
+    }
+  }
+}
+.contactInfo {
+  width: 100%;
+  transform: scaleX(-1);
+  .email {
+    display: flex;
+    align-items: center;
+    img {
+      width: 30px;
+      margin-right: 24px;
+    }
+    p {
+      font-family: "CustomFont2", sans-serif;
+      font-size: 0.9rem;
+    }
+  }
+  .phone {
+    display: flex;
+    align-items: center;
+    margin-top: 12px;
+    img {
+      width: 30px;
+      margin-right: 24px;
+    }
+    p {
+      font-family: "CustomFont2", sans-serif;
+      font-size: 0.9rem;
+    }
+  }
+  .linkedIn {
+    display: flex;
+    align-items: center;
+    margin-top: 12px;
+    img {
+      width: 30px;
+      margin-right: 24px;
+    }
+    a {
+      font-family: "CustomFont2", sans-serif;
+      color: white;
+      text-decoration: underline;
+      text-decoration-color: white;
+      font-size: 0.9rem;
+    }
+  }
+}
+
+a[href^="tel"] {
+  color: white !important;
+  text-decoration: none;
+}
+
+// RESPONSIVE
+
+@media (max-width: 1200px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 500px) {
+  header {
+    padding: 0 24px;
+  }
+  .sectionOne {
+    padding: 100px 24px;
+    .first {
+      h1 {
+        font-size: 3rem;
+        margin-top: -8px;
+      }
+      .wrapper{
+        height: 50px;
+        .item{
+            img{
+                width: 12px;
+            }
+        }
+    }
+    }
+    .contactInfo {
+        .email {
+          img {
+            width: 20px;
+            margin-right: 24px;
+          }
+        }
+        .phone {
+          img {
+            width: 20px;
+            margin-right: 24px;
+          }
+        }
+        .linkedIn {
+          img {
+            width: 20px;
+            margin-right: 24px;
+          }
+        }
+      }
+  }
+}

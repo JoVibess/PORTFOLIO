@@ -157,7 +157,7 @@ header {
   z-index: 30;
   display: flex;
   justify-content: center;
-  padding: 0 100px;
+  padding: 0 60px;
   flex-direction: column;
   height: 10vh;
   font-size: 1rem;
@@ -269,32 +269,40 @@ header ul li:hover a {
     transform: scaleX(-1);
     color: white;
     padding: 0 60px;
-    #title1 {
-      font-family: "CustomFont1", sans-serif;
-      font-size: 5rem;
-      font-weight: 700;
-      text-transform: uppercase;
+    h1 {
       text-align: end;
+      span {
+        display: inline-block;
+      }
+      #title1 {
+        font-family: "CustomFont1", sans-serif;
+        font-size: 5rem;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+      #letter1,
+      #letter2,
+      #letter3 {
+        font-family: "CustomFont1", sans-serif;
+        font-size: 5rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        text-align: center;
+        font-style: italic;
+        color: transparent; /* Rendre l'intérieur du texte transparent */
+        -webkit-text-stroke: 2px white; /* Contour noir de 1px */
+      }
+      #letter3 {
+        margin-right: 180px;
+      }
+      #title3 {
+        font-family: "CustomFont1", sans-serif;
+        font-size: 5rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-right: 150px;
+      }
     }
-    #title2 {
-      font-family: "CustomFont1", sans-serif;
-      font-size: 5rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      text-align: center;
-      font-style: italic;
-      color: transparent; /* Rendre l'intérieur du texte transparent */
-      -webkit-text-stroke: 2px white; /* Contour noir de 1px */
-      display: flex;
-      justify-content: center;
-    }
-  }
-  #title3 {
-    font-family: "CustomFont1", sans-serif;
-    font-size: 5rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    margin-right: 70px;
   }
 }
 
@@ -468,7 +476,7 @@ footer {
     width: 100%;
     margin-inline: auto;
     position: relative;
-    height: 100px;
+    height: 70px;
     margin-top: 30px;
     border-top: solid 1px white;
     overflow: hidden;
@@ -488,7 +496,7 @@ footer {
       align-items: center;
       justify-content: center;
       width: 100px;
-      height: 100px;
+      height: 70px;
       position: absolute;
       left: max((100px * 12), 100%);
       animation-name: scrollLeft;
@@ -551,9 +559,10 @@ a[href^="tel"] {
 
 // ------------------- RESPONSIVE -------------------
 
-//Horizontal Scroll
-
 @media (max-width: 1200px) {
+  html {
+    font-size: 15px;
+  }
 }
 
 @media (max-width: 500px) {
@@ -571,16 +580,24 @@ a[href^="tel"] {
       transform: scaleX(-1);
       color: white;
       padding: 0 60px;
-      #title1 {
-        font-size: 3rem;
+      h1 {
+        #title1 {
+          font-size: 2.8rem;
+        }
+        #letter1,
+        #letter2,
+        #letter3 {
+          font-size: 2.8rem;
+          -webkit-text-stroke: 1px white; /* Contour noir de 1px */
+        }
+        #letter3 {
+          margin-right: 50px;
+        }
+        #title3 {
+          font-size: 2.8rem;
+          margin-right: 50px;
+        }
       }
-      #title2 {
-        font-size: 3rem;
-        -webkit-text-stroke: 1px white; /* Contour noir de 1px */
-      }
-    }
-    #title3 {
-      font-size: 3rem;
     }
   }
 
@@ -606,8 +623,11 @@ a[href^="tel"] {
             position: absolute;
             width: 50px;
             height: 50px;
-            left: 330px;
-            bottom: 20px;
+            left: 270px;
+            bottom: 10px;
+          }
+          h2 {
+            font-size: 3.2rem;
           }
         }
         .mee {
