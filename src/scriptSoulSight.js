@@ -32,26 +32,23 @@ menu2.addEventListener("animationend", (event) => {
   }
 });
 
-// Section 1
-
-gsap.from(".mockupM114", {
-  scrollTrigger: ".sectionOne",
-  x: "-300%",
-  duration: 2,
-  ease: "power2.out",
-});
 
 // Section 2
 
-gsap.from(".projetSec3", {
-  scrollTrigger: ".projetSec3",
-  x: "10%", // Déplacement du bas vers le haut
-  opacity: 0,
-  duration: 2,
-  ease: "power2.out",
-});
-
-
+gsap.fromTo(
+  ".projetSec3",
+  {
+    x: "10%",
+    opacity: 0,
+  },
+  {
+    x: 0,
+    opacity: 1,
+    scrollTrigger: ".projetSec3",
+    duration: 2,
+    ease: "power2.out",
+  }
+);
 // Section 3
 
 const panels = document.querySelectorAll(".panel");
