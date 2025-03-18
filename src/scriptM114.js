@@ -2,7 +2,6 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
-
 // Header
 
 const menuburger = document.querySelector(".menu-burger");
@@ -32,27 +31,39 @@ menu2.addEventListener("animationend", (event) => {
   }
 });
 
-// Section 1
+// // Section 1
 
-gsap.from(".mockupM114", {
-  scrollTrigger: ".sectionOne",
-  x: "-300%",
-  duration: 2,
-  ease: "power2.out",
-});
+gsap.fromTo(
+  ".mockupM114",
+  {
+    x: "-300%",
+  },
+  {
+    x: 0,
+    scrollTrigger: ".sectionOne",
+    duration: 2,
+    ease: "power2.out",
+  }
+);
 
-// Section 2
+// // Section 2
 
-gsap.from(".projetSec3", {
-  scrollTrigger: ".projetSec3",
-  x: "10%", // Déplacement du bas vers le haut
-  opacity: 0,
-  duration: 2,
-  ease: "power2.out",
-});
+gsap.fromTo(
+  ".projetSec3",
+  {
+    x: "10%",
+    opacity: 0,
+  },
+  {
+    x: 0,
+    opacity: 1,
+    scrollTrigger: ".projetSec3",
+    duration: 2,
+    ease: "power2.out",
+  }
+);
 
-
-// Section 3
+// // Section 3
 
 const panels = document.querySelectorAll(".panel");
 panels.forEach((panel) => {
@@ -68,38 +79,57 @@ function removeActiveClasses() {
   });
 }
 
-// Section 4
+// // Section 4
 
-gsap.from(".sectionFour", {
-  scrollTrigger: ".sectionFour",
-  y: "10%",
-  opacity: 0,
-  duration: 1.6,
-  ease: "power2.out",
-});
+gsap.fromTo(
+  ".sectionFour",
+  {
+    y: "10%",
+    opacity: 0,
+  },
+  {
+    y: 0,
+    opacity: 1,
+    scrollTrigger: ".sectionFour",
+    duration: 1.6,
+    ease: "power2.out",
+  }
+);
 
+// // Section 5
 
+if (window.innerWidth >= 768) {
+  gsap.fromTo(
+    ".mockupIphone",
+    {
+      x: "300%",
+      opacity: 0,
+    },
+    {
+      x: 0,
+      opacity: 1,
+      scrollTrigger: ".sectionFive",
+      duration: 2,
+      ease: "power2.out",
+    }
+  );
+  gsap.fromTo(
+    ".mockupTablette",
+    {
+      x: "-200%",
+      opacity: 0,
+    },
+    {
+      x: 0,
+      opacity: 1,
+      scrollTrigger: ".sectionFive",
+      duration: 2,
+      ease: "power2.out",
+    }
+  );
+}
 
-
-// Section 5
-
-gsap.from(".mockupIphone", {
-  scrollTrigger: ".sectionFive",
-  x: "300%",
-  duration: 2,
-  ease: "power2.out",
-});
-
-gsap.from(".mockupTablette", {
-  scrollTrigger: ".sectionFive",
-  x: "-200%",
-  duration: 2,
-  ease: "power2.out",
-});
-
-
-// Section 7
-
+// // Section 7
 
 gsap.from(".sectionSix h2", {
   scrollTrigger: ".bloc2Six",
@@ -117,9 +147,7 @@ gsap.from(".sectionSeven h2", {
   ease: "power2.out",
 });
 
-
-
-// Circle effect
+// // Circle effect
 
 let circle = document.querySelector(".circle");
 circle.addEventListener("click", function () {
@@ -147,4 +175,3 @@ circle.addEventListener("click", function () {
     }, 5000);
   }
 });
-

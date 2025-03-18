@@ -495,7 +495,7 @@ header ul li:hover a {
   height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
-  z-index: -1;
+  z-index: 100;
 }
 
 .sectionFive {
