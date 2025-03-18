@@ -282,6 +282,22 @@
 
       <section class="sectionHeight">
         <h2>Other Projects</h2>
+        <div class="projGroup1">
+          <div class="proj">
+            <img src="/img/proj1A.webp" alt="" />
+            <img src="/img/proj1B.webp" alt="" />
+            <h2>
+              <a href="https://joeydecroix.com/maison114.html">Maison 114</a>
+            </h2>
+          </div>
+          <div class="proj">
+            <img src="/img/proj1C.webp" alt="" />
+            <img src="/img/proj1D.webp" alt="" />
+            <h2>
+              <a href="https://joeydecroix.com/soulSight.html">SoulSight</a>
+            </h2>
+          </div>
+        </div>
       </section>
     </main>
 
@@ -363,4 +379,21 @@
   </body>
 
   <script type="module" src="./scriptM114.js"></script>
+  <script type="module">
+    import hoverEffect from "./hover-effect.js";
+
+  // Exécuter seulement si l'écran a une largeur maximale de 768px
+  Array.from(document.querySelectorAll(".proj")).forEach((e) => {
+    const imgs = Array.from(e.querySelectorAll("img"));
+    new hoverEffect({
+      parent: e,
+      intensity: 0.3,
+      image1: imgs[0].getAttribute("src"),
+      image2: imgs[1].getAttribute("src"),
+      displacementImage: "/img/hoverEffect/7.jpg",
+    });
+  });
+
+
+  </script>
 </html>

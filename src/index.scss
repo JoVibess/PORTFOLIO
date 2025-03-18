@@ -392,6 +392,15 @@ header ul li:hover a {
 // Section Three
 
 .sectionThree {
+  h2 {
+    font-family: "CustomFont1", sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 3rem;
+    text-align: center;
+    margin-bottom: 20px;
+  }
   width: 100%;
   max-width: 1600px;
   color: white;
@@ -574,6 +583,10 @@ a[href^="tel"] {
       .proj{
         width: 900px;
         height: 600px;
+        margin: 0 auto;
+        h2{
+          font-size: 2rem;
+        }
       }
     }
   }
@@ -661,7 +674,7 @@ a[href^="tel"] {
     }
   }
   .sectionThree {
-    margin: 60px auto;
+    margin: 24px auto;
     padding: 0 24px;
     .projGroup1 {
       flex-direction: column; 
@@ -669,6 +682,9 @@ a[href^="tel"] {
         width: 360px;
         height: 240px;
         margin: 10px;
+        h2 a {
+          font-size: 1.8rem;
+        }
       }
     }
   }

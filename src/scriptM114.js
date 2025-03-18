@@ -33,6 +33,7 @@ menu2.addEventListener("animationend", (event) => {
 
 // // Section 1
 
+if (window.innerWidth >= 768) {
 gsap.fromTo(
   ".mockupM114",
   {
@@ -45,6 +46,7 @@ gsap.fromTo(
     ease: "power2.out",
   }
 );
+}
 
 // // Section 2
 

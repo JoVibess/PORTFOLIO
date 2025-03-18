@@ -498,6 +498,11 @@ header ul li:hover a {
   z-index: 100;
 }
 
+@media (max-width: 768px) {
+  .sectionFour {
+    display: none;
+  }
+}
 .sectionFive {
   width: 100%;
   max-width: 1600px;
@@ -806,9 +811,14 @@ header ul li:hover a {
 }
 
 .sectionHeight {
-  display: flex;
-  justify-content: center;
+  width: 100%;
+  max-width: 1600px;
   color: white;
+  margin: 0px auto;
+  padding: 0 60px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
 }
 .sectionHeight h2 {
   font-family: "CustomFont1", sans-serif;
@@ -816,8 +826,76 @@ header ul li:hover a {
   font-weight: 600;
   text-transform: uppercase;
   line-height: 3rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.sectionHeight .projGroup1 {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.sectionHeight .projGroup1 .proj {
+  position: relative;
+  width: 765px;
+  height: 510px;
+  margin: 24px;
+}
+.sectionHeight .projGroup1 .proj img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: none;
+}
+.sectionHeight .projGroup1 .proj h2 {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  font-family: "CustomFont1", sans-serif;
+  font-size: 2.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2px;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+}
+.sectionHeight .projGroup1 .proj h2 a {
+  color: white;
 }
 
+@media (max-width: 1200px) {
+  .sectionHeight {
+    padding: 0 24px;
+  }
+  .sectionHeight .projGroup1 {
+    flex-direction: column;
+  }
+  .sectionHeight .projGroup1 .proj {
+    width: 900px;
+    height: 600px;
+  }
+}
+@media (max-width: 768px) {
+  .sectionHeight {
+    margin: 0px auto;
+    padding: 0 24px;
+  }
+  .sectionHeight .projGroup1 {
+    flex-direction: column;
+  }
+  .sectionHeight .projGroup1 .proj {
+    width: 360px;
+    height: 240px;
+    margin: 10px;
+  }
+  .sectionHeight .projGroup1 .proj h2 a {
+    font-size: 1.8rem;
+  }
+}
 footer {
   display: flex;
   flex-direction: column;
@@ -978,7 +1056,7 @@ a[href^=tel] {
     background-size: 600px;
   }
   .sectionFive {
-    margin-top: 0;
+    margin-top: 100px;
     height: 1000px;
   }
   .sectionFive .blocFive {
@@ -1140,6 +1218,7 @@ a[href^=tel] {
   }
   .sectionFive {
     padding: 0 24px;
+    margin-top: 80px;
     height: 500px;
   }
   .sectionFive .blocFive {
