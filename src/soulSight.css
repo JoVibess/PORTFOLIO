@@ -386,6 +386,94 @@ header ul li:hover a {
   background-size: 800px;
 }
 
+.sectionFour {
+  width: 100%;
+  max-width: 1600px;
+  color: white;
+  margin: 0 auto;
+  margin-top: 100px;
+  padding: 0 60px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.sectionFour h2 {
+  font-family: "CustomFont1", sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 3rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.sectionFour .projGroup1 {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.sectionFour .projGroup1 .proj {
+  position: relative;
+  width: 765px;
+  height: 510px;
+  margin: 24px;
+}
+.sectionFour .projGroup1 .proj img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: none;
+}
+.sectionFour .projGroup1 .proj h2 {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  font-family: "CustomFont1", sans-serif;
+  font-size: 2.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2px;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+}
+.sectionFour .projGroup1 .proj h2 a {
+  color: white;
+}
+
+@media (max-width: 1200px) {
+  .sectionFour {
+    padding: 0 24px;
+  }
+  .sectionFour .projGroup1 {
+    flex-direction: column;
+  }
+  .sectionFour .projGroup1 .proj {
+    width: 900px;
+    height: 600px;
+  }
+}
+@media (max-width: 768px) {
+  .sectionFour {
+    margin: 0 auto;
+    margin-top: 100px;
+    padding: 0 24px;
+  }
+  .sectionFour .projGroup1 {
+    flex-direction: column;
+  }
+  .sectionFour .projGroup1 .proj {
+    width: 360px;
+    height: 240px;
+    margin: 10px;
+  }
+  .sectionFour .projGroup1 .proj h2 a {
+    font-size: 1.8rem;
+  }
+}
 footer {
   display: flex;
   flex-direction: column;
@@ -645,7 +733,7 @@ a[href^=tel] {
     background-size: 0;
   }
   footer {
-    margin-top: 70px;
+    margin-top: 80px;
   }
   footer .contact {
     margin-top: 14px;
