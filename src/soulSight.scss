@@ -351,12 +351,6 @@ header ul li:hover a {
   }
 }
 
-@keyframes spin {
-  100% {
-    transform: rotate(360deg); /* Rotation complète */
-  }
-}
-
 // ---------------------------------------------------------------
 
 // Section 3
@@ -430,13 +424,23 @@ header ul li:hover a {
 
 .sectionFour {
   h2 {
+    color: $bleu;
     font-family: "CustomFont1", sans-serif;
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: 600;
     text-transform: uppercase;
+    font-style: italic;
     line-height: 3rem;
     text-align: center;
-    margin-bottom: 20px;
+  }
+  .separator2{
+    width: 300px;
+    height: 2px;
+    background: $bleu;
+    margin-inline: auto;
+    margin-bottom: 60px;
+    margin-top: 4px;
+
   }
   width: 100%;
   max-width: 1600px;
@@ -467,13 +471,13 @@ header ul li:hover a {
         object-fit: cover;
         display: none;
       }
-      h2 {
+      h3 {
         position: absolute;
         transform: translate(-50%, -50%);
         top: 50%;
         left: 50%;
         font-family: "CustomFont1", sans-serif;
-        font-size: 2.7rem;
+        font-size: 2.5rem;
         text-transform: uppercase;
         letter-spacing: 0.2px;
         text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
@@ -493,6 +497,9 @@ header ul li:hover a {
       .proj {
         width: 900px;
         height: 600px;
+        h3 a {
+          font-size: 2rem;
+        }
       }
     }
   }
@@ -503,13 +510,20 @@ header ul li:hover a {
     margin: 0 auto;
     margin-top: 100px;
     padding: 0 24px;
+    h2{
+      font-size: 2rem;
+    }
+    .separator2{
+      margin-top: 0;
+      margin-bottom: 40px;
+    }
     .projGroup1 {
       flex-direction: column;
       .proj {
         width: 360px;
         height: 240px;
         margin: 10px;
-        h2 a {
+        h3 a {
           font-size: 1.8rem;
         }
       }
@@ -684,6 +698,11 @@ a[href^="tel"] {
       }
     }
   }
+  .sectionFour{
+    .separator2 {
+      width: 200px;
+    }
+  }
 }
 
 @media (max-width: 1024px) {
@@ -772,6 +791,9 @@ a[href^="tel"] {
       .projetSec3 {
         width: 100%;
         margin-top: 20px;
+        p{
+          line-height: 2rem;
+        }
       }
     }
   }
@@ -790,11 +812,14 @@ a[href^="tel"] {
           top: 30px;
           left: 24px;
           margin-right: 4px;
+          font-size: 1.2rem;
+          line-height: 1.4rem;
         }
         p {
           top: 120px;
           left: 24px;
           padding-right: 24px;
+          line-height: 2rem;
         }
       }
       .panel.active.fond {

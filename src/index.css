@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  list-style: none;
 }
 
 html {
@@ -313,7 +314,7 @@ header ul li:hover a {
 .sectionTwo .sectionTwoContent .about .separator {
   width: 100%;
   height: 4px;
-  background: linear-gradient(to right, #007bff, #131314);
+  background: linear-gradient(to right, #007bff, transparent);
   margin-bottom: 30px;
   margin-top: 6px;
   border-radius: 50px;
@@ -354,35 +355,148 @@ header ul li:hover a {
 
 .sectionThree {
   width: 100%;
+  max-width: 1200px;
+  color: white;
+  margin: 100px auto;
+  padding: 0 60px;
+  margin-top: -60px;
+}
+.sectionThree .sectionThreeTitle h2 {
+  color: #306ae8;
+  font-family: "CustomFont1", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-style: italic;
+  line-height: 3rem;
+  text-align: center;
+}
+.sectionThree .sectionThreeTitle .separator2 {
+  width: 100px;
+  height: 2px;
+  background: #306ae8;
+  margin-inline: auto;
+  margin-bottom: 40px;
+  margin-top: 4px;
+}
+.sectionThree .sectionThreeContent {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  width: 100%;
+}
+.sectionThree .sectionThreeContent .languages,
+.sectionThree .sectionThreeContent .framework {
+  display: inline-block;
+}
+.sectionThree .sectionThreeContent .languages h3,
+.sectionThree .sectionThreeContent .framework h3 {
+  font-family: "CustomFont1", sans-serif;
+  font-size: 2.4rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  line-height: 2rem;
+}
+.sectionThree .sectionThreeContent .languages h3 span,
+.sectionThree .sectionThreeContent .framework h3 span {
+  font-size: 1.4rem;
+}
+.sectionThree .sectionThreeContent .languages ul,
+.sectionThree .sectionThreeContent .framework ul {
+  padding-top: 20px;
+}
+.sectionThree .sectionThreeContent .languages ul li,
+.sectionThree .sectionThreeContent .framework ul li {
+  font-family: "CustomFont2", sans-serif;
+  font-size: 1rem;
+  font-weight: 200;
+  line-height: 2rem;
+  position: relative;
+  padding-left: 150px;
+}
+.sectionThree .sectionThreeContent .languages ul li::before,
+.sectionThree .sectionThreeContent .framework ul li::before {
+  font-size: 1.4rem;
+  color: #306ae8;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  letter-spacing: 3px;
+}
+.sectionThree .sectionThreeContent .languages ul li[data-level="1"]::before,
+.sectionThree .sectionThreeContent .framework ul li[data-level="1"]::before {
+  content: "● ● ● ● ●";
+}
+.sectionThree .sectionThreeContent .languages ul li[data-level="2"]::before,
+.sectionThree .sectionThreeContent .framework ul li[data-level="2"]::before {
+  content: "● ● ● ● ○";
+}
+.sectionThree .sectionThreeContent .languages ul li[data-level="3"]::before,
+.sectionThree .sectionThreeContent .framework ul li[data-level="3"]::before {
+  content: "● ● ● ○ ○";
+}
+.sectionThree .sectionThreeContent .languages ul li[data-level="4"]::before,
+.sectionThree .sectionThreeContent .framework ul li[data-level="4"]::before {
+  content: "● ● ○ ○ ○";
+}
+.sectionThree .sectionThreeContent .languages ul li[data-level="5"]::before,
+.sectionThree .sectionThreeContent .framework ul li[data-level="5"]::before {
+  content: "● ● ○ ○ ○";
+}
+.sectionThree .sectionThreeContent .languages ul li[data-level="6"]::before,
+.sectionThree .sectionThreeContent .framework ul li[data-level="6"]::before {
+  content: "● ● ○ ○ ○";
+}
+.sectionThree .sectionThreeContent .languages ul li[data-level="7"]::before,
+.sectionThree .sectionThreeContent .framework ul li[data-level="7"]::before {
+  content: "● ● ○ ○ ○";
+}
+.sectionThree .sectionThreeContent .languages ul li[data-level="8"]::before,
+.sectionThree .sectionThreeContent .framework ul li[data-level="8"]::before {
+  content: "● ● ● ○ ○";
+}
+
+.sectionFour {
+  width: 100%;
   max-width: 1600px;
   color: white;
   margin: 100px auto;
   padding: 0 60px;
   position: relative;
 }
-.sectionThree h2 {
+.sectionFour h2 {
+  color: #306ae8;
   font-family: "CustomFont1", sans-serif;
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 600;
   text-transform: uppercase;
+  font-style: italic;
   line-height: 3rem;
   text-align: center;
-  margin-bottom: 20px;
 }
-.sectionThree .projGroup1 {
+.sectionFour .separator3 {
+  width: 300px;
+  height: 2px;
+  background: #306ae8;
+  margin-inline: auto;
+  margin-bottom: 60px;
+  margin-top: 4px;
+}
+.sectionFour .projGroup1 {
   position: relative;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.sectionThree .projGroup1 .proj {
+.sectionFour .projGroup1 .proj {
   position: relative;
   width: 765px;
   height: 510px;
   margin: 24px;
 }
-.sectionThree .projGroup1 .proj img {
+.sectionFour .projGroup1 .proj img {
   position: absolute;
   top: 0;
   left: 0;
@@ -392,18 +506,19 @@ header ul li:hover a {
      object-fit: cover;
   display: none;
 }
-.sectionThree .projGroup1 .proj h2 {
+.sectionFour .projGroup1 .proj h3 {
   position: absolute;
+  color: white;
   transform: translate(-50%, -50%);
   top: 50%;
   left: 50%;
   font-family: "CustomFont1", sans-serif;
-  font-size: 2.7rem;
+  font-size: 2.5rem;
   text-transform: uppercase;
   letter-spacing: 0.2px;
   text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
 }
-.sectionThree .projGroup1 .proj h2 a {
+.sectionFour .projGroup1 .proj a {
   color: white;
 }
 
@@ -524,26 +639,39 @@ a[href^=tel] {
   text-decoration: none;
 }
 
+#iconeDate {
+  transform-origin: center center;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg); /* Rotation complète */
+  }
+}
 @media (max-width: 1200px) {
   html {
     font-size: 15px;
   }
-  .sectionThree {
+  .sectionFour {
     padding: 0 24px;
   }
-  .sectionThree .projGroup1 {
+  .sectionFour .separator3 {
+    width: 200px;
+  }
+  .sectionFour .projGroup1 {
     flex-direction: column;
   }
-  .sectionThree .projGroup1 .proj {
+  .sectionFour .projGroup1 .proj {
     width: 900px;
     height: 600px;
     margin: 0 auto;
   }
-  .sectionThree .projGroup1 .proj h2 {
+  .sectionFour .projGroup1 .proj h3 {
     font-size: 2rem;
   }
 }
-@media (max-width: 500px) {
+@media (max-width: 768px) {
   html {
     font-size: 15px;
   }
@@ -608,6 +736,9 @@ a[href^=tel] {
   .sectionTwo .sectionTwoContent .about .mee {
     display: none;
   }
+  .sectionTwo .sectionTwoContent .about p {
+    line-height: 2rem;
+  }
   .sectionTwo .sectionTwoContent .myHead {
     width: 100%;
     height: 500px;
@@ -616,19 +747,26 @@ a[href^=tel] {
     width: 100%;
     height: 100%;
   }
-  .sectionThree {
+  .sectionFour {
     margin: 24px auto;
     padding: 0 24px;
   }
-  .sectionThree .projGroup1 {
+  .sectionFour h2 {
+    font-size: 2rem;
+  }
+  .sectionFour .separator3 {
+    margin-top: 0;
+    margin-bottom: 40px;
+  }
+  .sectionFour .projGroup1 {
     flex-direction: column;
   }
-  .sectionThree .projGroup1 .proj {
+  .sectionFour .projGroup1 .proj {
     width: 360px;
     height: 240px;
     margin: 10px;
   }
-  .sectionThree .projGroup1 .proj h2 a {
+  .sectionFour .projGroup1 .proj h3 a {
     font-size: 1.8rem;
   }
   footer {
@@ -636,5 +774,22 @@ a[href^=tel] {
   }
   footer .contact {
     margin-top: 14px;
+  }
+}
+@media (max-width: 500px) {
+  .sectionThree {
+    width: 100%;
+    max-width: 1200px;
+    color: white;
+    margin: 100px auto;
+    padding: 0 24px;
+  }
+  .sectionThree .sectionThreeContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .sectionThree .sectionThreeContent .framework {
+    margin-top: 40px;
   }
 }/*# sourceMappingURL=index.css.map */

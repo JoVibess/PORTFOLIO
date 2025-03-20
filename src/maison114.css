@@ -261,11 +261,11 @@ header ul li:hover a {
   .sectionOne {
     padding: 0 60px;
   }
+  .mockupM114 {
+    width: 1300px;
+  }
 }
 @media (max-width: 1300px) {
-  .sectionOne .mockupM114 {
-    width: 1400px;
-  }
   .sectionOne .blueStick #stick5 {
     display: none;
   }
@@ -405,11 +405,6 @@ header ul li:hover a {
   animation: spin 2s linear infinite;
 }
 
-@keyframes spin {
-  100% {
-    transform: rotate(360deg); /* Rotation complète */
-  }
-}
 @keyframes spin {
   100% {
     transform: rotate(360deg); /* Rotation complète */
@@ -821,13 +816,22 @@ header ul li:hover a {
   flex-direction: column;
 }
 .sectionHeight h2 {
+  color: #306ae8;
   font-family: "CustomFont1", sans-serif;
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 600;
   text-transform: uppercase;
+  font-style: italic;
   line-height: 3rem;
   text-align: center;
-  margin-bottom: 20px;
+}
+.sectionHeight .separator2 {
+  width: 300px;
+  height: 2px;
+  background: #306ae8;
+  margin-inline: auto;
+  margin-bottom: 60px;
+  margin-top: 4px;
 }
 .sectionHeight .projGroup1 {
   position: relative;
@@ -852,18 +856,18 @@ header ul li:hover a {
      object-fit: cover;
   display: none;
 }
-.sectionHeight .projGroup1 .proj h2 {
+.sectionHeight .projGroup1 .proj h3 {
   position: absolute;
   transform: translate(-50%, -50%);
   top: 50%;
   left: 50%;
   font-family: "CustomFont1", sans-serif;
-  font-size: 2.7rem;
+  font-size: 2.5rem;
   text-transform: uppercase;
   letter-spacing: 0.2px;
   text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
 }
-.sectionHeight .projGroup1 .proj h2 a {
+.sectionHeight .projGroup1 .proj h3 a {
   color: white;
 }
 
@@ -878,11 +882,21 @@ header ul li:hover a {
     width: 900px;
     height: 600px;
   }
+  .sectionHeight .projGroup1 .proj h3 a {
+    font-size: 2rem;
+  }
 }
 @media (max-width: 768px) {
   .sectionHeight {
     margin: 0px auto;
     padding: 0 24px;
+  }
+  .sectionHeight h2 {
+    font-size: 2rem;
+  }
+  .sectionHeight .separator2 {
+    margin-top: 0;
+    margin-bottom: 40px;
   }
   .sectionHeight .projGroup1 {
     flex-direction: column;
@@ -892,7 +906,7 @@ header ul li:hover a {
     height: 240px;
     margin: 10px;
   }
-  .sectionHeight .projGroup1 .proj h2 a {
+  .sectionHeight .projGroup1 .proj h3 a {
     font-size: 1.8rem;
   }
 }
@@ -1046,6 +1060,9 @@ a[href^=tel] {
   .sectionFour {
     height: 800px;
   }
+  .sectionHeight .separator2 {
+    width: 200px;
+  }
 }
 @media (max-width: 1024px) {
   .sectionThree .container .panel {
@@ -1187,6 +1204,9 @@ a[href^=tel] {
     width: 100%;
     margin-top: 20px;
   }
+  .sectionTwo .projetTexte .projetSec3 p {
+    line-height: 2rem;
+  }
   .sectionThree {
     height: 330px;
     padding: 0 24px;
@@ -1204,11 +1224,14 @@ a[href^=tel] {
   .sectionThree .container .panel h2 {
     top: 30px;
     left: 24px;
+    font-size: 1.2rem;
+    line-height: 1.4rem;
   }
   .sectionThree .container .panel p {
     top: 70px;
     left: 24px;
     padding-right: 24px;
+    line-height: 2rem;
   }
   .sectionThree .container .panel.active.fond {
     background-size: 0;
