@@ -35,7 +35,6 @@ menu2.addEventListener("animationend", (event) => {
 
 // SECTION 1
 
-
 // GSAP
 
 gsap.from("#text1", {
@@ -59,64 +58,62 @@ gsap.from(
   "-=1"
 );
 
-gsap.from("#blueStar", {
-  scrollTrigger: "#blueStar",
-  x: 400, 
-  rotation: 360,
-  duration: 1,
-});
-
-gsap.from(".separator", {
-  scrollTrigger: ".separator",
-  x: 700, 
-  duration: 0.8,
-});
+if (window.innerWidth >= 768) {
+  gsap.from(".separator", {
+    scrollTrigger: ".separator",
+    x: 700,
+    duration: 0.8,
+  });
+  gsap.from("#blueStar", {
+    scrollTrigger: "#blueStar",
+    x: 400,
+    rotation: 360,
+    duration: 1,
+  });
+  gsap.from("#title1", {
+    scrollTrigger: "#title1",
+    x: -300,
+    duration: 1,
+    opacity: 0,
+    ease: "power2.out",
+  });
+  gsap.from("#title3", {
+    scrollTrigger: "#title3",
+    x: 300,
+    duration: 1,
+    opacity: 0,
+    ease: "power2.out",
+  });
+  gsap.from("#letter1", {
+    scrollTrigger: "#letter1",
+    x: -500,
+    duration: 1,
+    rotation: 360,
+    opacity: 0,
+    ease: "power2.out",
+  });
+  gsap.from("#letter2", {
+    scrollTrigger: "#letter2",
+    x: 500,
+    duration: 0.8,
+    rotation: -360,
+    opacity: 0,
+    ease: "power2.out",
+  });
+  gsap.from("#letter3", {
+    scrollTrigger: "#letter3",
+    x: 400,
+    duration: 1,
+    rotation: -360,
+    opacity: 0,
+    ease: "power2.out",
+  });
+}
 
 gsap.from("#text3", {
   scrollTrigger: "#text3",
-  x: -100, 
+  x: -100,
   duration: 1,
-  opacity: 0,
-  ease: "power2.out",
-});
-
-gsap.from("#title1", {
-  scrollTrigger: "#title1",
-  x: -300, 
-  duration: 1,
-  opacity: 0,
-  ease: "power2.out",
-});
-
-gsap.from("#title3", {
-  scrollTrigger: "#title3",
-  x: 300, 
-  duration: 1,
-  opacity: 0,
-  ease: "power2.out",
-});
-
-gsap.from("#letter1", {
-  scrollTrigger: "#letter1",
-  x: -500, 
-  duration: 1,
-  rotation: 360,
-  opacity: 0,
-  ease: "power2.out",
-});
-gsap.from("#letter2", {
-  scrollTrigger: "#letter2",
-  x: 500, 
-  duration: 0.8,
-  rotation: -360,
-  opacity: 0,
-  ease: "power2.out",
-});
-gsap.from("#letter3", {
-  scrollTrigger: "#letter3",
-  x: 400, 
-  duration: 1,
-  rotation: -360,
   opacity: 0,
   ease: "power2.out",
 });

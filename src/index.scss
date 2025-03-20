@@ -5,6 +5,7 @@ $bleu: #306ae8;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  list-style: none;
 }
 
 html {
@@ -346,7 +347,7 @@ header ul li:hover a {
       .separator {
         width: 100%;
         height: 4px;
-        background: linear-gradient(to right, #007bff, #131314);
+        background: linear-gradient(to right, #007bff, transparent);
         margin-bottom: 30px;
         margin-top: 6px;
         border-radius: 50px;
@@ -392,14 +393,126 @@ header ul li:hover a {
 // Section Three
 
 .sectionThree {
+  width: 100%;
+  max-width: 1200px;
+  color: white;
+  margin: 100px auto;
+  padding: 0 60px;
+  margin-top: -60px;
+
+  .sectionThreeTitle {
+    h2 {
+      color: $bleu;
+      font-family: "CustomFont1", sans-serif;
+      font-size: 2.5rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      font-style: italic;
+      line-height: 3rem;
+      text-align: center;
+    }
+    .separator2 {
+      width: 100px;
+      height: 2px;
+      background: $bleu;
+      margin-inline: auto;
+      margin-bottom: 40px;
+      margin-top: 4px;
+    }
+  }
+  .sectionThreeContent {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    width: 100%;
+
+    .languages,
+    .framework {
+      display: inline-block;
+
+      h3 {
+        font-family: "CustomFont1", sans-serif;
+        font-size: 2.4rem;
+        text-transform: uppercase;
+        font-weight: 600;
+        line-height: 2rem;
+        span {
+          font-size: 1.4rem;
+        }
+      }
+
+      ul {
+        padding-top: 20px;
+
+        li {
+          font-family: "CustomFont2", sans-serif;
+          font-size: 1rem;
+          font-weight: 200;
+          line-height: 2rem;
+          position: relative;
+          padding-left: 150px; // Ajuste l'espace pour les points
+
+          &::before {
+            font-size: 1.4rem;
+            color: $bleu;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            letter-spacing: 3px;
+          }
+
+          // Gérer le nombre de points avec les data-attributes
+          &[data-level="1"]::before {
+            content: "● ● ● ● ●";
+          }
+          &[data-level="2"]::before {
+            content: "● ● ● ● ○";
+          }
+          &[data-level="3"]::before {
+            content: "● ● ● ○ ○";
+          }
+          &[data-level="4"]::before {
+            content: "● ● ○ ○ ○";
+          }
+          &[data-level="5"]::before {
+            content: "● ● ○ ○ ○";
+          }
+          &[data-level="6"]::before {
+            content: "● ● ○ ○ ○";
+          }
+          &[data-level="7"]::before {
+            content: "● ● ○ ○ ○";
+          }
+          &[data-level="8"]::before {
+            content: "● ● ● ○ ○";
+          }
+        }
+      }
+    }
+  }
+}
+
+// Section Four
+
+.sectionFour {
   h2 {
+    color: $bleu;
     font-family: "CustomFont1", sans-serif;
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: 600;
     text-transform: uppercase;
+    font-style: italic;
     line-height: 3rem;
     text-align: center;
-    margin-bottom: 20px;
+  }
+  .separator3 {
+    width: 300px;
+    height: 2px;
+    background: $bleu;
+    margin-inline: auto;
+    margin-bottom: 60px;
+    margin-top: 4px;
   }
   width: 100%;
   max-width: 1600px;
@@ -407,18 +520,18 @@ header ul li:hover a {
   margin: 100px auto;
   padding: 0 60px;
   position: relative;
-  .projGroup1{
+  .projGroup1 {
     position: relative;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    .proj{
+    .proj {
       position: relative;
       width: 765px;
       height: 510px;
       margin: 24px;
-      img{
+      img {
         position: absolute;
         top: 0;
         left: 0;
@@ -427,25 +540,24 @@ header ul li:hover a {
         object-fit: cover;
         display: none;
       }
-      h2{
+      h3 {
         position: absolute;
+        color: white;
         transform: translate(-50%, -50%);
         top: 50%;
         left: 50%;
         font-family: "CustomFont1", sans-serif;
-        font-size: 2.7rem;
+        font-size: 2.5rem;
         text-transform: uppercase;
         letter-spacing: 0.2px;
         text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
-        a{
-          color: white;
-        }
-
+      }
+      a {
+        color: white;
       }
     }
   }
 }
-
 
 footer {
   display: flex;
@@ -570,31 +682,42 @@ a[href^="tel"] {
   text-decoration: none;
 }
 
+#iconeDate {
+  transform-origin: center center;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg); /* Rotation complète */
+  }
+}
 // ------------------- RESPONSIVE -------------------
 
 @media (max-width: 1200px) {
   html {
     font-size: 15px;
   }
-  .sectionThree {
+  .sectionFour {
     padding: 0 24px;
+    .separator3 {
+      width: 200px;
+    }
     .projGroup1 {
-      flex-direction: column; 
-      .proj{
+      flex-direction: column;
+      .proj {
         width: 900px;
         height: 600px;
         margin: 0 auto;
-        h2{
+        h3 {
           font-size: 2rem;
         }
       }
     }
   }
-
-
 }
 
-@media (max-width: 500px) {
+@media (max-width: 768px) {
   html {
     font-size: 15px;
   }
@@ -662,6 +785,9 @@ a[href^="tel"] {
         .mee {
           display: none;
         }
+        p{
+          line-height: 2rem;
+        }
       }
       .myHead {
         width: 100%;
@@ -673,16 +799,23 @@ a[href^="tel"] {
       }
     }
   }
-  .sectionThree {
+  .sectionFour {
     margin: 24px auto;
     padding: 0 24px;
+    h2 {
+      font-size: 2rem;
+    }
+    .separator3 {
+      margin-top: 0;
+      margin-bottom: 40px;
+    }
     .projGroup1 {
-      flex-direction: column; 
-      .proj{
+      flex-direction: column;
+      .proj {
         width: 360px;
         height: 240px;
         margin: 10px;
-        h2 a {
+        h3 a {
           font-size: 1.8rem;
         }
       }
@@ -695,4 +828,23 @@ a[href^="tel"] {
       margin-top: 14px;
     }
   }
+}
+
+@media (max-width: 500px){
+  .sectionThree{
+    width: 100%;
+    max-width: 1200px;
+    color: white;
+    margin: 100px auto;
+    padding: 0 24px;
+    .sectionThreeContent {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .framework {
+        margin-top: 40px;
+    }
+
+  }
+}
 }
