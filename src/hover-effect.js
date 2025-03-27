@@ -3,7 +3,7 @@ import { gsap, Expo } from "gsap";
 
 var hoverEffect = function (opts) {
   function firstDefined(...args) {
-    return args.find(arg => arg !== undefined);
+    return args.find((arg) => arg !== undefined);
   }
 
   var parent = opts.parent;
@@ -107,16 +107,30 @@ var hoverEffect = function (opts) {
     opacity: 1.0,
   });
 
-  var geometry = new THREE.PlaneGeometry(parent.offsetWidth, parent.offsetHeight, 1);
+  var geometry = new THREE.PlaneGeometry(
+    parent.offsetWidth,
+    parent.offsetHeight,
+    1
+  );
   var object = new THREE.Mesh(geometry, mat);
   scene.add(object);
 
   function transitionIn() {
-    gsap.to(mat.uniforms.dispFactor, { duration: speedIn, value: 1, ease: easing, onUpdate: render });
+    gsap.to(mat.uniforms.dispFactor, {
+      duration: speedIn,
+      value: 1,
+      ease: easing,
+      onUpdate: render,
+    });
   }
 
   function transitionOut() {
-    gsap.to(mat.uniforms.dispFactor, { duration: speedOut, value: 0, ease: easing, onUpdate: render });
+    gsap.to(mat.uniforms.dispFactor, {
+      duration: speedOut,
+      value: 0,
+      ease: easing,
+      onUpdate: render,
+    });
   }
 
   if (userHover) {
