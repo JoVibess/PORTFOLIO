@@ -1,20 +1,54 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/img/iconeSite.png" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project | SoulSight</title>
     <link rel="stylesheet" href="/soulSight.css" />
-    <link rel="icon" type="image/png" href="/img/iconeSite.png">
 
-    <!-- Font -->
+    <title>JDX - Portfolio | SoulSight</title>
+    <meta name="title" content="JDX - Portfolio | SoulSight - Game Project" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
+    <!-- Meta Description (SEO) -->
+    <meta
+      name="description"
+      content="SoulSight, a runner-style video game in which the player is a
+      teenager with a passion for urbex."
     />
+
+    <!-- Open Graph (Réseaux sociaux) -->
+    <meta
+      property="og:title"
+      content="JDX - Portfolio | SoulSight - Game Project"
+    />
+    <meta
+      property="og:description"
+      content="SoulSight, a runner-style video game in which the player is a
+      teenager with a passion for urbex."
+    />
+    <meta
+      property="og:image"
+      content="https://joeydecroix.com/img/preview.jpg"
+    />
+    <meta property="og:url" content="https://joeydecroix.com/soulSight.html" />
+    <meta property="og:type" content="website" />
+
+    <!-- Data Structured (Schema.org) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "JDX - Portfolio | SoulSight - Game Project",
+        "url": "https://joeydecroix.com/soulSight.html",
+        "image": "https://joeydecroix.com/img/preview.jpg",
+        "description": "SoulSight, a runner-style video game in which the player is a
+        teenager with a passion for urbex."
+      }
+    </script>
+
   </head>
 
   <body>
@@ -44,7 +78,9 @@
             <li style="--i: 2">
               <a href="https://joeydecroix.com/maison114.html">Projects</a>
             </li>
-            <li style="--i: 1"><a href="https://joeydecroix.com/contact.html">Contact</a></li>
+            <li style="--i: 1">
+              <a href="https://joeydecroix.com/contact.html">Contact</a>
+            </li>
           </ul>
         </nav>
       </div>
@@ -198,7 +234,9 @@
     <footer>
       <div class="menu1">
         <div class="logo">
-          <a href="https://joeydecroix.com/index.html"><img src="/img/logo-blanc.webp" alt="Logo JDX" /></a>
+          <a href="https://joeydecroix.com/index.html"
+            ><img src="/img/logo-blanc.webp" alt="Logo JDX"
+          /></a>
         </div>
       </div>
       <div class="wrapper">
@@ -276,18 +314,16 @@
   <script type="module">
     import hoverEffect from "./hover-effect.js";
 
-  // Exécuter seulement si l'écran a une largeur maximale de 768px
-  Array.from(document.querySelectorAll(".proj")).forEach((e) => {
-    const imgs = Array.from(e.querySelectorAll("img"));
-    new hoverEffect({
-      parent: e,
-      intensity: 0.3,
-      image1: imgs[0].getAttribute("src"),
-      image2: imgs[1].getAttribute("src"),
-      displacementImage: "/img/hoverEffect/7.jpg",
+    // Exécuter seulement si l'écran a une largeur maximale de 768px
+    Array.from(document.querySelectorAll(".proj")).forEach((e) => {
+      const imgs = Array.from(e.querySelectorAll("img"));
+      new hoverEffect({
+        parent: e,
+        intensity: 0.3,
+        image1: imgs[0].getAttribute("src"),
+        image2: imgs[1].getAttribute("src"),
+        displacementImage: "/img/hoverEffect/7.jpg",
+      });
     });
-  });
-
-
   </script>
 </html>
