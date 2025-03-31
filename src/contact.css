@@ -224,23 +224,26 @@ header ul li:hover a {
 .sectionOne {
   color: white;
   width: 100%;
-  max-width: 1600px;
   padding: 100px 60px;
-  margin: 0 auto;
   background-image: url("/img/indexBackground.webp");
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
   transform: scaleX(-1);
 }
-.sectionOne .first h1 {
+.sectionOne .sectionOneContent {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1600px;
+}
+.sectionOne .sectionOneContent .first h1 {
   font-family: "CustomFont1", sans-serif;
   text-transform: uppercase;
   font-size: 6rem;
   transform: scaleX(-1);
   margin-top: -20px;
 }
-.sectionOne .first p {
+.sectionOne .sectionOneContent .first p {
   transform: scaleX(-1);
   margin-bottom: 18px;
   font-size: 0.7rem;
@@ -251,7 +254,7 @@ header ul li:hover a {
   letter-spacing: 0.2px;
   word-spacing: 1px;
 }
-.sectionOne .first .wrapper {
+.sectionOne .sectionOneContent .first .wrapper {
   transform: scaleX(-1);
   width: 100%;
   margin-inline: auto;
@@ -262,7 +265,7 @@ header ul li:hover a {
   -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgb(0, 0, 0) 20%, rgb(0, 0, 0) 80%, rgba(0, 0, 0, 0));
           mask-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgb(0, 0, 0) 20%, rgb(0, 0, 0) 80%, rgba(0, 0, 0, 0));
 }
-.sectionOne .first .wrapper .item {
+.sectionOne .sectionOneContent .first .wrapper .item {
   font-family: "CustomFont2", sans-serif;
   font-size: 0.6rem;
   letter-spacing: 0.2px;
@@ -279,43 +282,43 @@ header ul li:hover a {
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
-.sectionOne .first .wrapper .item img {
+.sectionOne .sectionOneContent .first .wrapper .item img {
   width: 20px;
 }
-.sectionOne .first .wrapper .item1 {
+.sectionOne .sectionOneContent .first .wrapper .item1 {
   animation-delay: -12.5s;
 }
-.sectionOne .first .wrapper .item2 {
+.sectionOne .sectionOneContent .first .wrapper .item2 {
   animation-delay: -10s;
 }
-.sectionOne .first .wrapper .item3 {
+.sectionOne .sectionOneContent .first .wrapper .item3 {
   animation-delay: -7.5s;
 }
-.sectionOne .first .wrapper .item4 {
+.sectionOne .sectionOneContent .first .wrapper .item4 {
   animation-delay: -5s;
 }
-.sectionOne .first .wrapper .item5 {
+.sectionOne .sectionOneContent .first .wrapper .item5 {
   animation-delay: -2.5s;
 }
-.sectionOne .first .wrapper .item6 {
+.sectionOne .sectionOneContent .first .wrapper .item6 {
   animation-delay: 0s;
 }
-.sectionOne .first .wrapper .item7 {
+.sectionOne .sectionOneContent .first .wrapper .item7 {
   animation-delay: 2.5s;
 }
-.sectionOne .first .wrapper .item8 {
+.sectionOne .sectionOneContent .first .wrapper .item8 {
   animation-delay: 5s;
 }
-.sectionOne .first .wrapper .item9 {
+.sectionOne .sectionOneContent .first .wrapper .item9 {
   animation-delay: 7.5s;
 }
-.sectionOne .first .wrapper .item10 {
+.sectionOne .sectionOneContent .first .wrapper .item10 {
   animation-delay: 10s;
 }
-.sectionOne .first .wrapper .item11 {
+.sectionOne .sectionOneContent .first .wrapper .item11 {
   animation-delay: 12.5s;
 }
-.sectionOne .first .wrapper .item12 {
+.sectionOne .sectionOneContent .first .wrapper .item12 {
   animation-delay: 15s;
 }
 @keyframes scrollLeft {
@@ -387,25 +390,25 @@ a[href^=tel] {
   .sectionOne {
     padding: 100px 24px;
   }
-  .sectionOne .first h1 {
+  .sectionOne .sectionOneContent .first h1 {
     font-size: 3rem;
     margin-top: -8px;
   }
-  .sectionOne .first .wrapper {
+  .sectionOne .sectionOneContent .first .wrapper {
     height: 50px;
   }
-  .sectionOne .first .wrapper .item img {
+  .sectionOne .sectionOneContent .first .wrapper .item img {
     width: 12px;
   }
-  .sectionOne .contactInfo .email img {
+  .sectionOne .sectionOneContent .contactInfo .email img {
     width: 20px;
     margin-right: 24px;
   }
-  .sectionOne .contactInfo .phone img {
+  .sectionOne .sectionOneContent .contactInfo .phone img {
     width: 20px;
     margin-right: 24px;
   }
-  .sectionOne .contactInfo .linkedIn img {
+  .sectionOne .sectionOneContent .contactInfo .linkedIn img {
     width: 20px;
     margin-right: 24px;
   }

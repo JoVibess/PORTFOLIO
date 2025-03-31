@@ -257,111 +257,113 @@ header ul li:hover a {
 .sectionOne {
   color: white;
   width: 100%;
-  max-width: 1600px;
   padding: 100px 60px;
-  margin: 0 auto;
   background-image: url("/img/indexBackground.webp");
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
   transform: scaleX(-1);
-
-  .first {
-    h1 {
-      font-family: "CustomFont1", sans-serif;
-      text-transform: uppercase;
-      font-size: 6rem;
-      transform: scaleX(-1);
-      margin-top: -20px;
-    }
-    p {
-      transform: scaleX(-1);
-      margin-bottom: 18px;
-      font-size: 0.7rem;
-      font-family: "CustomFont2", sans-serif;
-      line-height: 24px;
-      text-transform: uppercase;
-      font-style: italic;
-      letter-spacing: 0.2px;
-      word-spacing: 1px;
-    }
-    .wrapper {
-      transform: scaleX(-1);
-      width: 100%;
-      margin-inline: auto;
-      position: relative;
-      height: 70px;
-      border-top: solid 1px white;
-      overflow: hidden;
-      mask-image: linear-gradient(
-        to right,
-        rgba(0, 0, 0, 0),
-        rgba(0, 0, 0, 1) 20%,
-        rgba(0, 0, 0, 1) 80%,
-        rgba(0, 0, 0, 0)
-      );
-      .item {
-        font-family: "CustomFont2", sans-serif;
-        font-size: 0.6rem;
-        letter-spacing: 0.2px;
+  .sectionOneContent {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1600px;
+    .first {
+      h1 {
+        font-family: "CustomFont1", sans-serif;
         text-transform: uppercase;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100px;
-        height: 50px;
-        position: absolute;
-        left: max((100px * 12), 100%);
-        animation-name: scrollLeft;
-        animation-duration: 30s;
-        animation-timing-function: linear;
-        animation-iteration-count: infinite;
-        img {
-          width: 20px;
+        font-size: 6rem;
+        transform: scaleX(-1);
+        margin-top: -20px;
+      }
+      p {
+        transform: scaleX(-1);
+        margin-bottom: 18px;
+        font-size: 0.7rem;
+        font-family: "CustomFont2", sans-serif;
+        line-height: 24px;
+        text-transform: uppercase;
+        font-style: italic;
+        letter-spacing: 0.2px;
+        word-spacing: 1px;
+      }
+      .wrapper {
+        transform: scaleX(-1);
+        width: 100%;
+        margin-inline: auto;
+        position: relative;
+        height: 70px;
+        border-top: solid 1px white;
+        overflow: hidden;
+        mask-image: linear-gradient(
+          to right,
+          rgba(0, 0, 0, 0),
+          rgba(0, 0, 0, 1) 20%,
+          rgba(0, 0, 0, 1) 80%,
+          rgba(0, 0, 0, 0)
+        );
+        .item {
+          font-family: "CustomFont2", sans-serif;
+          font-size: 0.6rem;
+          letter-spacing: 0.2px;
+          text-transform: uppercase;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100px;
+          height: 50px;
+          position: absolute;
+          left: max((100px * 12), 100%);
+          animation-name: scrollLeft;
+          animation-duration: 30s;
+          animation-timing-function: linear;
+          animation-iteration-count: infinite;
+          img {
+            width: 20px;
+          }
+        }
+        .item1 {
+          animation-delay: calc(30s / 12 * (6 - 1) * -1);
+        }
+        .item2 {
+          animation-delay: calc(30s / 12 * (6 - 2) * -1);
+        }
+        .item3 {
+          animation-delay: calc(30s / 12 * (6 - 3) * -1);
+        }
+        .item4 {
+          animation-delay: calc(30s / 12 * (6 - 4) * -1);
+        }
+        .item5 {
+          animation-delay: calc(30s / 12 * (6 - 5) * -1);
+        }
+        .item6 {
+          animation-delay: calc(30s / 12 * (6 - 6) * -1);
+        }
+        .item7 {
+          animation-delay: calc(30s / 12 * (6 - 7) * -1);
+        }
+        .item8 {
+          animation-delay: calc(30s / 12 * (6 - 8) * -1);
+        }
+        .item9 {
+          animation-delay: calc(30s / 12 * (6 - 9) * -1);
+        }
+        .item10 {
+          animation-delay: calc(30s / 12 * (6 - 10) * -1);
+        }
+        .item11 {
+          animation-delay: calc(30s / 12 * (6 - 11) * -1);
+        }
+        .item12 {
+          animation-delay: calc(30s / 12 * (6 - 12) * -1);
         }
       }
-      .item1 {
-        animation-delay: calc(30s / 12 * (6 - 1) * -1);
-      }
-      .item2 {
-        animation-delay: calc(30s / 12 * (6 - 2) * -1);
-      }
-      .item3 {
-        animation-delay: calc(30s / 12 * (6 - 3) * -1);
-      }
-      .item4 {
-        animation-delay: calc(30s / 12 * (6 - 4) * -1);
-      }
-      .item5 {
-        animation-delay: calc(30s / 12 * (6 - 5) * -1);
-      }
-      .item6 {
-        animation-delay: calc(30s / 12 * (6 - 6) * -1);
-      }
-      .item7 {
-        animation-delay: calc(30s / 12 * (6 - 7) * -1);
-      }
-      .item8 {
-        animation-delay: calc(30s / 12 * (6 - 8) * -1);
-      }
-      .item9 {
-        animation-delay: calc(30s / 12 * (6 - 9) * -1);
-      }
-      .item10 {
-        animation-delay: calc(30s / 12 * (6 - 10) * -1);
-      }
-      .item11 {
-        animation-delay: calc(30s / 12 * (6 - 11) * -1);
-      }
-      .item12 {
-        animation-delay: calc(30s / 12 * (6 - 12) * -1);
-      }
     }
-  }
 
-  @keyframes scrollLeft {
-    to {
-      left: -200px;
+    @keyframes scrollLeft {
+      to {
+        left: -200px;
+      }
     }
   }
 }
@@ -430,21 +432,23 @@ a[href^="tel"] {
   }
   .sectionOne {
     padding: 100px 24px;
-    .first {
-      h1 {
-        font-size: 3rem;
-        margin-top: -8px;
-      }
-      .wrapper{
-        height: 50px;
-        .item{
-            img{
-                width: 12px;
-            }
+    .sectionOneContent{
+
+      .first {
+        h1 {
+          font-size: 3rem;
+          margin-top: -8px;
         }
-    }
-    }
-    .contactInfo {
+        .wrapper {
+          height: 50px;
+          .item {
+            img {
+              width: 12px;
+            }
+          }
+        }
+      }
+      .contactInfo {
         .email {
           img {
             width: 20px;
@@ -464,5 +468,6 @@ a[href^="tel"] {
           }
         }
       }
-  }
+    }
+    }
 }
