@@ -24,6 +24,8 @@ body::before {
   pointer-events: none;
 }
 body {
+  display: flex;
+  flex-direction: column;
   background: #131314;
   overflow-x: hidden;
   // display: flex;
@@ -31,6 +33,7 @@ body {
   // height: 100%;
   // width: 100%;
 }
+
 
 // ___________________FONT_____________________
 
@@ -105,7 +108,7 @@ body {
 
 header ul li:hover,
 header ul li:active {
-  background: $bleu;
+  background: #3c76f3;
   transform: translateX(-50px);
 }
 
@@ -216,10 +219,6 @@ header {
 header ul li:hover a {
   color: #fff;
 }
-
-// header ul li:last-child::after {
-//   box-shadow: -120px 120px 20px rgba(0,0,0,0.25);
-// }
 
 @keyframes slideIn {
   from {

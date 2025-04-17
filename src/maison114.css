@@ -11,36 +11,24 @@ html {
   font-size: 20px;
 }
 
-body {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  width: 100%;
-  background: #131314;
-  overflow-x: hidden;
-}
-
-body {
-  position: relative; /* Nécessaire pour positionner le pseudo-élément */
-  overflow-x: hidden;
-  width: 100vw;
-}
-
 body::before {
   content: "";
-  position: fixed; /* Couvre tout l'écran, même au défilement */
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: var(--bodyHeight);
   opacity: 20%;
-  filter: url(#grainy);
-  z-index: 10; /* S'assure que cette couche soit au-dessus de tout */
-  pointer-events: none; /* Permet de cliquer/interagir avec les éléments en dessous */
+  background-image: url("/img/grain.svg");
+  z-index: 10;
+  pointer-events: none;
 }
 
-.svgBackground {
-  height: 0;
+body {
+  background: #131314;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 @font-face {
@@ -217,10 +205,6 @@ header ul li:hover a {
     top: 140px;
   }
 }
-.svgBackground {
-  height: 0;
-}
-
 .sectionOne {
   width: 100%;
   height: 100vh;

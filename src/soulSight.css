@@ -27,6 +27,8 @@ body::before {
 body {
   background: #131314;
   overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 @font-face {
