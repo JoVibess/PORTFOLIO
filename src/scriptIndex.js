@@ -33,6 +33,19 @@ menu2.addEventListener("animationend", (event) => {
   }
 });
 
+let getBodyHeight = (function () {
+  const body = document.body;
+  const observer = new ResizeObserver((entries) => {
+    for (let entry of entries) {
+      document.documentElement.style.setProperty(
+        "--bodyHeight",
+        `${entry.contentRect.height}px`
+      );
+    }
+  });
+  observer.observe(body);
+})();
+
 // SECTION 1
 
 // GSAP
