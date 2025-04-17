@@ -2,6 +2,8 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
+
+
 // Header
 
 const menuburger = document.querySelector(".menu-burger");
@@ -24,6 +26,18 @@ menuburger.addEventListener("click", () => {
   isMenuOpen = !isMenuOpen;
 });
 
+// Détection Safari
+function isSafari() {
+  return /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  if (isSafari()) {
+    const sec4 = document.querySelector('.sectionFour');
+    if (sec4) sec4.style.display = 'none';
+  }
+});
+
 // Lors de la fin de l'animation, cacher complètement le menu si c'est une sortie
 menu2.addEventListener("animationend", (event) => {
   if (event.animationName === "slideOut") {
@@ -31,22 +45,35 @@ menu2.addEventListener("animationend", (event) => {
   }
 });
 
-// // Section 1
+let getBodyHeight = (function () {
+  const body = document.body;
+  const observer = new ResizeObserver((entries) => {
+    for (let entry of entries) {
+      document.documentElement.style.setProperty(
+        "--bodyHeight",
+        `${entry.contentRect.height}px`
+      );
+    }
+  });
+  observer.observe(body);
+})();
 
-if (window.innerWidth >= 768) {
-gsap.fromTo(
-  ".mockupM114",
-  {
-    x: "-300%",
-  },
-  {
-    x: 0,
-    scrollTrigger: ".sectionOne",
-    duration: 2,
-    ease: "power2.out",
-  }
-);
+// // Section 1
+if (!isSafari() && window.innerWidth >= 768) {
+  gsap.fromTo(
+    ".mockupM114",
+    {
+      x: "-300%",
+    },
+    {
+      x: 0,
+      scrollTrigger: ".sectionOne",
+      duration: 2,
+      ease: "power2.out",
+    }
+  );
 }
+
 
 // // Section 2
 
@@ -100,7 +127,7 @@ gsap.fromTo(
 
 // // Section 5
 
-if (window.innerWidth >= 768) {
+if (!isSafari() && window.innerWidth >= 768) {
   gsap.fromTo(
     ".mockupIphone",
     {
@@ -177,3 +204,4 @@ circle.addEventListener("click", function () {
     }, 5000);
   }
 });
+
