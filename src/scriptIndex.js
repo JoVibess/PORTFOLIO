@@ -33,6 +33,7 @@ menu2.addEventListener("animationend", (event) => {
   }
 });
 
+
 let getBodyHeight = (function () {
   const body = document.body;
   const observer = new ResizeObserver((entries) => {

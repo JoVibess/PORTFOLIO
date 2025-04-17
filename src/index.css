@@ -25,6 +25,8 @@ body::before {
 }
 
 body {
+  display: flex;
+  flex-direction: column;
   background: #131314;
   overflow-x: hidden;
 }
@@ -85,7 +87,7 @@ body {
 }
 header ul li:hover,
 header ul li:active {
-  background: #306ae8;
+  background: #3c76f3;
   transform: translateX(-50px);
 }
 
