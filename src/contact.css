@@ -24,23 +24,6 @@ body {
   width: 100vw;
 }
 
-body::before {
-  content: "";
-  position: fixed; /* Couvre tout l'écran, même au défilement */
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 20%;
-  filter: url(#grainy);
-  z-index: 10; /* S'assure que cette couche soit au-dessus de tout */
-  pointer-events: none; /* Permet de cliquer/interagir avec les éléments en dessous */
-}
-
-.svgBackground {
-  height: 0;
-}
-
 @font-face {
   font-family: "CustomFont1";
   src: url("/font/GOMERY-Bold.woff2") format("woff2");

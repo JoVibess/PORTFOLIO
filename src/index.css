@@ -11,19 +11,6 @@ html {
   font-size: 20px;
 }
 
-body::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: var(--bodyHeight);
-  opacity: 20%;
-  background-image: url("/img/grain.svg");
-  z-index: 10;
-  pointer-events: none;
-}
-
 body {
   display: flex;
   flex-direction: column;

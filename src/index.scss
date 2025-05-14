@@ -11,18 +11,7 @@ $bleu: #306ae8;
 html {
   font-size: 20px;
 }
-body::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: var(--bodyHeight);
-  opacity: 20%;
-  background-image: url("/img/grain.svg");
-  z-index: 10;
-  pointer-events: none;
-}
+
 body {
   display: flex;
   flex-direction: column;
@@ -33,7 +22,6 @@ body {
   // height: 100%;
   // width: 100%;
 }
-
 
 // ___________________FONT_____________________
 
@@ -774,7 +762,7 @@ a[href^="tel"] {
         .mee {
           display: none;
         }
-        p{
+        p {
           line-height: 2rem;
         }
       }
@@ -788,7 +776,7 @@ a[href^="tel"] {
       }
     }
   }
-  
+
   .sectionFour {
     margin: 24px auto;
     padding: 0 24px;
@@ -820,8 +808,8 @@ a[href^="tel"] {
   }
 }
 
-@media (max-width: 500px){
-  .sectionThree{
+@media (max-width: 500px) {
+  .sectionThree {
     width: 100%;
     max-width: 1200px;
     color: white;
@@ -833,8 +821,7 @@ a[href^="tel"] {
       align-items: center;
       .framework {
         margin-top: 40px;
+      }
     }
-
   }
-}
 }
